@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 
@@ -162,10 +161,8 @@ body, ul {
     <div class="sidebar">
     <label for="sidebar-toggle" class="toggle-btn">&#9776;</label>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="admin-passenger-details.jsp">View Passenger Details</a></li>
+      <li><a href="#">Modify Flight</a></li>
     </ul>
   </div>
   <div class="content">
@@ -180,18 +177,18 @@ body, ul {
     <label for="From">From</label>
     <select id="From" name="From" required>
         <option value="">Origin</option>
-        <option value="connecting">Penang</option>
-        <option value="adjoining">Perlis</option>
-        <option value="adjacent">Kedah</option>
+        <option value="Penang">Penang</option>
+        <option value="Perlis">Perlis</option>
+        <option value="Kedah">Kedah</option>
     </select>
     </div>
   <div class="elem-group inlined">
  <label for="From">To</label>
     <select id="From" name="From" required>
         <option value="">Destination</option>
-        <option value="connecting">Penang</option>
-        <option value="adjoining">Perlis</option>
-        <option value="adjacent">Kedah</option>
+        <option value="Penang">Penang</option>
+        <option value="Perlis">Perlis</option>
+        <option value="Kedah">Kedah</option>
     </select>
   </div>
   <div class="elem-group inlined">
