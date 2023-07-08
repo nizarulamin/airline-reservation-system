@@ -70,7 +70,7 @@
       	border: 1px solid #ccc;
       	border-radius: 25px;
       	box-sizing: border-box;
-      	width: 610px;
+      	width: 500px;
     }
         input[type="text"]#to {
       	padding: 10px 20px;
@@ -79,7 +79,7 @@
       	border: 1px solid #ccc;
       	border-radius: 25px;
       	box-sizing: border-box;
-      	width: 610px;
+      	width: 500px;
    		position: relative;
     	left: 750px;
     	bottom: 68px;
