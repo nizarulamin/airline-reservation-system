@@ -179,14 +179,14 @@ text-align : left;}
 <div id="login-form-wrap">
   <h3>Login</h3>
   <form id="login-form">
-	    <p>
-	    <input type="text" style="font-size:13px; " id="username" name="email" placeholder="Email" required><i class="validation"><span></span><span></span></i>
-	    </p>
-	    <p>
-	    <input type="password"  style="font-size:12px;" id="pswd" name="password" placeholder="Password" required><i class="validation"><span></span><span></span></i>
-	    </p>
-	    <input type="submit" style ="width: 270px; height: 40px;" id="login" value="Login">
-	    
+        <p>
+        <input type="text" style="font-size:13px; " id="username" name="email" placeholder="Email" required><i class="validation"><span></span><span></span></i>
+        </p>
+        <p>
+        <input type="password"  style="font-size:12px;" id="pswd" name="password" placeholder="Password" required><i class="validation"><span></span><span></span></i>
+        </p>
+        <input type="submit" style ="width: 270px; height: 40px;" id="login" value="Login">
+        
 	    <a href="#" style="font-size:13px; text-align:right;">Forgot Password</a><br>
 	    <p></p>
   </form>
