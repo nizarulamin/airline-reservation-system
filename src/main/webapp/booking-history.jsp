@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -100,13 +99,13 @@
   <div class="topnav-centered">
     <a href="index.jsp" >Home</a>
     <a href="#flights">Flights</a>
-    <a href="#booking" class="active">Booking</a>
+    <a href="booking-history.jsp" class="active">Booking</a>
   </div>
 
   <!-- Right-aligned links -->
   <div class="topnav-right">
-    <a href="#login">Login</a>
-    <a href="index.jsp">Register</a>
+    <a href="login.jsp">Login</a>
+    <a href="register.jsp">Register</a>
   </div>
 
 </div>
