@@ -98,7 +98,7 @@
   <!-- Centered link -->
   <div class="topnav-centered">
     <a href="index.jsp" >Home</a>
-    <a href="#flights">Flights</a>
+    <a href="search-flight.jsp">Flights</a>
     <a href="booking-history.jsp" class="active">Booking</a>
   </div>
 
