@@ -18,10 +18,10 @@ div.elem-group {
 }
 
 div.elem-group.inlined {
-  width: 49%;
-  display: inline-block;
-  float: left;
-  margin-left: 1%;
+ flex-direction: column;
+ flex-grow: 1;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 label {
@@ -55,7 +55,7 @@ hr {
 }
 
 button {
-  height: 50px;
+  height: 55px;
   background: #1d77b3;
   border: none;
   color: white;
@@ -64,13 +64,15 @@ button {
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
-  margin: 15px;
-  padding: 15px;
+  margin:10px;
+  padding: 1px;
+  width: 150px;
+  overflow: visible;
   
   
 }
 button.cancel{
-  height: 50px;
+  height: 55px;
   background: white;
   border: 2px solid black;
   color: black;
@@ -80,7 +82,8 @@ button.cancel{
   cursor: pointer;
   text-align: center;
   margin: 10px;
-  
+  padding: 1px;
+  width: 100px;
   
 }
 
@@ -110,6 +113,7 @@ body, ul {
   padding: 20px;
   transition: width 0.3s ease-in-out;
   overflow: hidden; /* Hide the overflowing menu items */
+  font-family: Arial;
 }
 
 .sidebar:hover {
@@ -149,23 +153,45 @@ body, ul {
   text-decoration: underline;
 }
 
+
 /* Style the content area */
 .content {
   flex-grow: 1;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Enable vertical scrolling within the content area */
 }
 
+form {
+  background-color: #f2f2f2;
+  padding: 15px;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+h1{
+  font: 2em arial;
+}
+
+/* Set a fixed height for the content container */
+.content-height {
+  height: calc(100vh - 40px); /* Subtract the padding of the content container */
+}
 </style>
 <body>
 <div class="wrapper">
     <div class="sidebar">
     <label for="sidebar-toggle" class="toggle-btn">&#9776;</label>
     <ul>
+      <li><h3>Admin</h3></li>
       <li><a href="admin-passenger-details.jsp">View Passenger Details</a></li>
       <li><a href="#">Modify Flight</a></li>
     </ul>
   </div>
-  <div class="content">
+  <div class="content content-height">
+    <center><h1>Add New Flight</h1></center>
 <form action="reservation.php" method="post">
   <div class="elem-group">
     <label for="flightNo">Flight No</label>
@@ -208,12 +234,12 @@ body, ul {
     <label for="price">Price</label>
     <input type="number" id="price" name="price" placeholder="Price" required>
   </div>
-  <div style="text-align: center">
-  <button type="submit" >Add New Flight</button>
-  <button class = "cancel" type="reset" >Cancel</button>
-  </div>
 
 </form>
+<center>
+<button type="submit" >Add New Flight</button>
+  <button class = "cancel" type="reset" >Cancel</button>
+</center>
 </div></div>
 </body>
 </html>
