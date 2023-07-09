@@ -94,8 +94,8 @@
     /* Add some styles for status buttons */
     .status-btn {
     display: inline-block;
-    padding: 5px 10px;
-    border-radius: 4px;
+    padding: 10px 10px;
+    border-radius: 18px;
     color: #fff;
     font-size: 14px;
     font-weight: bold;
