@@ -143,7 +143,7 @@ input[type="submit"] {
   display: inline-block;
   cursor: pointer;
   text-align: center;
-  magin-left: 80px;
+  margin-left: 80px;
 }
 input[type="submit"]:hover {
   background-color: #329dd5;
