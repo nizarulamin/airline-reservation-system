@@ -1,99 +1,98 @@
+<!DOCTYPE html>
 <html>
-<head><title>Register</title> </head>
+<head>
+<title>Register</title>
 <style>
-* {box-sizing: border-box}
+* {
+  box-sizing: border-box;
+}
 
-/* Add padding to containers */
+body {
+  background-color: #f1f1f1;
+  font-family: "Arial", sans-serif;
+}
+
 .container {
-  padding: 16px;
-  text-align: center;
-  font-family: "Arial";
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Full-width input fields */
-input[type=text], input[type=password], input[type=number] {
-  width: 50%;
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container form {
+  margin-bottom: 20px;
+}
+
+.container form input {
+  width: 100%;
   padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
+  margin-bottom: 15px;
   border: none;
-  background: #f1f1f1;
-  text-align: center;
+  background-color: #f1f1f1;
+  font-size: 16px;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+.container form input:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Overwrite default styles of hr */
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for the submit/register button */
-.registerbtn {
-  background-color: #04AA6D;
+.container form .registerbtn {
+  width: 100%;
+  background-color: #1d77b3;
   color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
+  padding: 16px;
+  margin-top: 10px;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
-  width: 50%;
-  opacity: 0.9;
 }
 
-.registerbtn:hover {
-  opacity:1;
+.container form .registerbtn:hover {
+  opacity: 0.8;
 }
 
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
+.container .signin {
   text-align: center;
 }
 
+.container .signin p {
+  margin-bottom: 0;
+}
 
+.container .signin a {
+  color: dodgerblue;
+}
 </style>
+</head>
 <body>
-<form action="">
-  <div class="container">
-    <h1>Register</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
-    
-     <!--  --<label for="fName"><b>First Name</b></label>-->
+<div class="container">
+  <h1>Register</h1>
+  <p>Please fill in this form to create an account.</p>
+  <form action="">
     <input type="text" placeholder="First Name" name="fName" id="fName" required>
-    <br>
- 	<!--  <label for="lName"><b>Last Name</b></label>-->
     <input type="text" placeholder="Last Name" name="lName" id="lName" required>
-	<br>
-    <!--  <label for="email"><b>Email</b></label>-->
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
-	<br>
-	<!--  <label for="phone"><b>Phone</b></label>-->
     <input type="number" placeholder="Phone Number" name="phone" id="phone" required>
-	<br>
-    <!--  <label for="psw"><b>Password</b></label>-->
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-	<br>
-    <!--  <label for="psw-confirm"><b>Confirm Password</b></label>-->
     <input type="password" placeholder="Confirm Password" name="psw-confirm" id="psw-repeat" required>
-    <hr>
-
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
     <button type="submit" class="registerbtn">Register</button>
-  </div>
-
-  <div class="container signin">
+  </form>
+  <div class="signin">
     <p>Already have an account? <a href="login.jsp">Sign in</a>.</p>
   </div>
-</form>
+</div>
 </body>
 </html>
