@@ -114,7 +114,7 @@
 </head>
 <body>
 <div class="header">
-    <h1 ><b>IAANZ Airlines</b></h1>
+    <h1 ><b>IANNZ Airlines</b></h1>
   </div>
   
   <div class="container">
