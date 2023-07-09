@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   background-color: #9f9da7;
@@ -50,7 +49,7 @@ a:active:hover {
 }
 
 #login-form {
-  padding: 0 60px; 
+  padding: 0 60px;
   text-align: right;
 }
 
@@ -139,18 +138,18 @@ input[type="submit"] {
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  font-size: 15px;
+  font-size: 18px;
   position: relative;
   display: inline-block;
   cursor: pointer;
   text-align: center;
+  magin-left: 80px;
 }
 input[type="submit"]:hover {
   background-color: #329dd5;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
 
 #create-account-wrap {
   background-color: #eeedf1;
@@ -160,34 +159,26 @@ input[type="submit"]:hover {
   padding: 10px 0;
   border-radius: 0 0 4px 4px;
 }
-
-.linkforgotpswd{
-text-align : left;}
 </style>
 </head>
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Login Form </title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
-
-</head>
-<body>
 <!-- partial:index.partial.html -->
 <div id="login-form-wrap">
   <h3>Login</h3>
   <form id="login-form">
-        <p>
-        <input type="text" style="font-size:13px; " id="username" name="email" placeholder="Email" required><i class="validation"><span></span><span></span></i>
-        </p>
-        <p>
-        <input type="password"  style="font-size:12px;" id="pswd" name="password" placeholder="Password" required><i class="validation"><span></span><span></span></i>
-        </p>
-        <input type="submit" style ="width: 270px; height: 40px;" id="login" value="Login">
-        
-	    <a href="#" style="font-size:13px; text-align:right;">Forgot Password</a><br>
+	    <p>
+	    <input type="text" style="font-size:13px;" id="username" name="email" placeholder="Email" required><i class="validation"><span></span><span></span></i>
+	    </p>
+	    <p>
+	    
+	    <input type="password"  style="font-size:12px;" id="pswd" name="password" placeholder="Password" required><i class="validation"><span></span><span></span></i>
+	    </p>
+	    <p>
+	    <input type="submit"  id="login" value="Login">
+	    </p>
+	    
+	    <a href="#" style="font-size:13px;" id="forgot">Forgot Password</a>
+	   
+	    <!--<a href="#" style="font-size:13px; text-align:right;">Forgot Password</a><br>-->
 	    <p></p>
   </form>
   <div id="create-account-wrap">
@@ -195,8 +186,5 @@ text-align : left;}
   </div><!--create-account-wrap-->
 </div><!--login-form-wrap-->
 <!-- partial -->
-  
 </body>
-</html>
-
 </html>
