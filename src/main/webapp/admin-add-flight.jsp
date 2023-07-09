@@ -113,6 +113,7 @@ body, ul {
   padding: 20px;
   transition: width 0.3s ease-in-out;
   overflow: hidden; /* Hide the overflowing menu items */
+  font-family: Arial;
 }
 
 .sidebar:hover {
@@ -164,11 +165,14 @@ body, ul {
 
 form {
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 15px;
   flex-grow: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+}
+h1{
+  font: 2em arial;
 }
 
 /* Set a fixed height for the content container */
@@ -181,11 +185,13 @@ form {
     <div class="sidebar">
     <label for="sidebar-toggle" class="toggle-btn">&#9776;</label>
     <ul>
+      <li><h3>Admin</h3></li>
       <li><a href="admin-passenger-details.jsp">View Passenger Details</a></li>
       <li><a href="#">Modify Flight</a></li>
     </ul>
   </div>
   <div class="content content-height">
+    <center><h1>Add New Flight</h1></center>
 <form action="reservation.php" method="post">
   <div class="elem-group">
     <label for="flightNo">Flight No</label>
