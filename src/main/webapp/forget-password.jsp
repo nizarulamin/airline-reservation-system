@@ -88,7 +88,7 @@
                             </div>
                             <button type="submit" class="btn">Reset Password</button>
                           </form>   
-                      <a href="login.html"><p>Back to Login</p> </a>    
+                      <a href="login.jsp"><p>Back to Login</p> </a>    
                     </div>
                 </div>
             </div>
