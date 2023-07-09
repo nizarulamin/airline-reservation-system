@@ -81,8 +81,8 @@
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1><b>IAANZ Airlines</b></h1>
+<div class="header">
+    <h1 ><b>IAANZ Airlines</b></h1>
   </div>
 
   <div class="container">
