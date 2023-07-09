@@ -98,7 +98,7 @@
 </head>
 <body>
 <div class="header">
-    <h1><b>IAANZ Airlines</b></h1>
+    <h1><b>IANNZ Airlines</b></h1>
     <h2>Passenger Details</h2>
     <button class="logout-button"><b>Logout</b></button>
 </div>
