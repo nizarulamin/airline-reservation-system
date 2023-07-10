@@ -137,7 +137,7 @@
   <!-- Top navigation -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> <a
-        class="navbar-brand name" href="index.jsp">IANNZ<span class="airline">Airlines</span></a>
+        class="navbar-brand name" href="index.jsp">IAANZ<span class="airline">Airlines</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
           class="navbar-toggler-icon"></span> </button>
