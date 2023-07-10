@@ -379,7 +379,7 @@
       transform: translate(0px, -10px) scale(1.2)
     }
   </style>
-  <title>Bootstrap Example</title>
+  <title>Edit Flight</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
