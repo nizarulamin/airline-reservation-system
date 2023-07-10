@@ -3,8 +3,7 @@
 
 <head>
   <style>
-
-  /*<!-- Table-->*/
+    /*<!-- Table-->*/
     table {
       font-family: arial, sans-serif;
       border-collapse: collapse;
@@ -27,7 +26,8 @@
       margin-left: auto;
       margin-right: 900px;
     }
-/*<!-- Old Button Submit-->*/
+
+    /*<!-- Old Button Submit-->*/
     input[type="submit"] {
       border: none;
       display: block;
@@ -51,8 +51,8 @@
       transition: all 0.2s ease;
     }
 
-    
-/*<!-- Side-Navigation-Bar-->*/
+
+    /*<!-- Side-Navigation-Bar-->*/
     .logo {
       padding: 20px;
     }
@@ -104,11 +104,13 @@
     nav ul li a:hover:before {
       width: 95%;
     }
+
     /*Adjust table box*/
     .wrapper {
       width: auto;
+      margin-left: 250px;
       text-align: center;
-      
+
     }
 
     .section {
@@ -127,6 +129,7 @@
       width: 100%;
       min-width: 100%
     }
+
     .flex {
       -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -153,10 +156,11 @@
       position: static;
       border-radius: 3px;
       background: #ffffff;
-      border-top: 3px solid #d2d6de;
+      border-top: 7px solid #d2d6de;
       margin-bottom: 30px;
-      width: 900px;
-      height: 500px;
+      margin-top: -100px;
+      width: auto;
+      height: auto;
       text-align: center;
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     }
@@ -352,26 +356,26 @@
     }
 
     a {
-      
+
       background-color: transparent;
     }
 
-   .button
-   {
-    display: inline-block;
-    background: #48b0e1;
-    color: #fff;
-    border:none;
-    text-transform: uppercase;
-    padding: 20px 100px;
-    border-radius: 5px;
-    box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
-    cursor: pointer;
-    -webkit-moz-transition: all ease-in-out 300ms;
-    transition: all ease-in-out 300ms
-  }
-    .button:hover
-    {
+    .button {
+      display: inline-block;
+      background: #48b0e1;
+      color: #fff;
+      border: none;
+      text-transform: uppercase;
+      padding: 20px 100px;
+      margin-left: 200px;
+      border-radius: 5px;
+      box-shadow: 0px 17px 10px -10px rgba(0, 0, 0, 0.4);
+      cursor: pointer;
+      -webkit-moz-transition: all ease-in-out 300ms;
+      transition: all ease-in-out 300ms
+    }
+
+    .button:hover {
       box-shadow: 0px 37px 20px -20px rgba(0, 0, 0, 0.2);
       -webkit-moz-transform: translate(0px, -10px) scale(1.2);
       transform: translate(0px, -10px) scale(1.2)
@@ -508,4 +512,5 @@
   </div>
 
 </body>
+
 </html>
