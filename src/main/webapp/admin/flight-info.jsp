@@ -138,7 +138,7 @@
 
     @media (max-width:991.98px) {
       .padding {
-        padding: 1.5rem
+        padding: 30rem
       }
     }
 
@@ -224,6 +224,7 @@
 
     .box-body>.table {
       margin-bottom: auto;
+      width: 800px;
     }
 
     .table-bordered {
@@ -379,7 +380,7 @@
       transform: translate(0px, -10px) scale(1.2)
     }
   </style>
-  <title>Edit Flight</title>
+  <title>Flight Info </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -419,6 +420,7 @@
                       <table class="table table-bordered">
                         <tbody>
                           <tr>
+                            <th>No.</th>
                             <th>Flight No.</th>
                             <th>From</th>
                             <th>To</th>
@@ -428,6 +430,7 @@
                             <th>Edit Flight</th>
                           </tr>
                           <tr>
+                            <td>1</td>
                             <td>IAN 220</td>
                             <td>KUL</td>
                             <td>AOR</td>
@@ -437,6 +440,7 @@
                             <td><span class="badge bg-red">55%</span></td>
                           </tr>
                           <tr>
+                            <td>2</td>
                             <td>IAN 220</td>
                             <td>KUL</td>
                             <td>AOR</td>
@@ -446,6 +450,7 @@
                             <td><span class="badge bg-red">55%</span></td>
                           </tr>
                           <tr>
+                            <td>3</td>
                             <td>IAN 220</td>
                             <td>KUL</td>
                             <td>AOR</td>
@@ -455,6 +460,7 @@
                             <td><span class="badge bg-red">55%</span></td>
                           </tr>
                           <tr>
+                            <td>4</td>
                             <td>IAN 220</td>
                             <td>KUL</td>
                             <td>AOR</td>
@@ -464,51 +470,7 @@
                             <td><span class="badge bg-red">55%</span></td>
                           </tr>
                           <tr>
-                            <td>IAN 220</td>
-                            <td>KUL</td>
-                            <td>AOR</td>
-                            <td>0800</td>
-                            <td>1304</td>
-                            <td>90.00</td>
-                            <td><span class="badge bg-red">55%</span></td>
-                          </tr>
-                          <tr>
-                            <td>IAN 220</td>
-                            <td>KUL</td>
-                            <td>AOR</td>
-                            <td>0800</td>
-                            <td>1304</td>
-                            <td>90.00</td>
-                            <td><span class="badge bg-red">55%</span></td>
-                          </tr>
-                          <tr>
-                            <td>IAN 220</td>
-                            <td>KUL</td>
-                            <td>AOR</td>
-                            <td>0800</td>
-                            <td>1304</td>
-                            <td>90.00</td>
-                            <td><span class="badge bg-red">55%</span></td>
-                          </tr>
-                          <tr>
-                            <td>IAN 220</td>
-                            <td>KUL</td>
-                            <td>AOR</td>
-                            <td>0800</td>
-                            <td>1304</td>
-                            <td>90.00</td>
-                            <td><span class="badge bg-red">55%</span></td>
-                          </tr>
-                          <tr>
-                            <td>IAN 220</td>
-                            <td>KUL</td>
-                            <td>AOR</td>
-                            <td>0800</td>
-                            <td>1304</td>
-                            <td>90.00</td>
-                            <td><span class="badge bg-red">55%</span></td>
-                          </tr>
-                          <tr>
+                            <td>5</td>
                             <td>IAN 220</td>
                             <td>KUL</td>
                             <td>AOR</td>
