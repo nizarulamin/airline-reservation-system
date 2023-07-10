@@ -212,6 +212,7 @@
     overflow-y: auto;
     /* Enable vertical scrolling within the content area */
   }
+  
 
   form {
     background-color: #cfebff;
@@ -232,6 +233,13 @@
     height: calc(100vh - 40px);
     /* Subtract the padding of the content container */
   }
+  .airline {
+      color: #119cff
+    }
+    .iaanz {
+      font-weight: 500;
+      color: #000000
+    }
 </style>
 
 <body>
