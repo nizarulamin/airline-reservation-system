@@ -230,7 +230,8 @@
 
   /* Set a fixed height for the content container */
   .content-height {
-    height: calc(100vh - 40px);
+    height: calc(vh - 40px);
+    margin-top: -80px;
     /* Subtract the padding of the content container */
   }
   .airline {
