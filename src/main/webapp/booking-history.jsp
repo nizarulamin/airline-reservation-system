@@ -115,7 +115,7 @@
       color: #119cff
     }
 
-    .booking {
+    .highlight {
       color: #119cff
     }
 
@@ -146,7 +146,7 @@
           <li class="nav-item"> <a class="nav-link" href="index.jsp">Home</a> </li>
           <li class="nav-item"> <a class="nav-link" href="search-flight.jsp">Flight</a> </li>
           <li class="nav-item"> <a class="nav-link active" aria-current="page" href="booking-history.jsp"><span
-                class="booking">Booking</span></a> </li>
+                class="highlight">Booking</span></a> </li>
         </ul>
       </div>
       <div class="nav-item"> <a class="nav-link" href="login.jsp" style="color: #7f858a;">Login</a> </div>
