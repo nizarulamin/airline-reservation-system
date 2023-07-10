@@ -320,7 +320,7 @@
     .airline {
       color: #119cff
     }
-    .nav-item {
+    .iaanz {
       font-weight: 500;
       color: #000000
     }
@@ -338,14 +338,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 
 </head>
 
 <body>
   <nav>
     <ul>
-      <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> <a
-      class="navbar-brand name" href="index.jsp">IANNZ<span class="airline">Airlines</span></a>
+      <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> 
+      <a class="iaanz" href="index.jsp">IANNZ<span class="airline">Airlines</span></a>
       <!--<li class="logo"><img src="https://i.imgur.com/E26Pj54.png"></li>-->
       <li><a href="#"><i class="fa fa-home"></i>&nbsp; Home</a></li>
       <li><a href="#"><i class="fa fa-book"></i>&nbsp; Flight Info</a></li>

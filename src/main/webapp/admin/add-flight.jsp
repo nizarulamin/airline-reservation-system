@@ -106,23 +106,56 @@
   }
 
   .wrapper {
-    display: flex;
+    display: auto;
+    margin-left: 270px;
   }
 
-  /* Style the sidebar */
-  .sidebar {
-    background-color: #3b5865;
-    color: #fff;
-    width: 30px;
-    /* Initial width of the collapsed sidebar */
-    height: 100vh;
-    /* Make the sidebar full height */
-    padding: 20px;
-    transition: width 0.3s ease-in-out;
-    overflow: hidden;
-    /* Hide the overflowing menu items */
-    font-family: Arial;
-  }
+  /*<!-- Side-Navigation-Bar-->*/
+  .logo {
+      padding: 20px;
+    }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 180px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #3b5865;
+    }
+    nav ul li {
+      list-style: none;
+    }
+    nav ul li a {
+      display: block;
+      font-family: 'montserrat';
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #fff;
+      position: relative;
+      padding: 15px 0px 15px 25px;
+      transition: all 0.5s;
+    }
+    nav ul li a:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      background: #e3e9f7;
+      border-radius: 40px 0 0 40px;
+      z-index: -1;
+      transition: all 1s;
+    }
+    nav ul li a:hover {
+      color: #2b2626;
+    }
+    nav ul li a:hover:before {
+      width: 95%;
+    }
+
 
   .sidebar:hover {
     width: 300px;
@@ -202,6 +235,16 @@
 </style>
 
 <body>
+  <nav>
+    <ul>
+      <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> 
+      <a class="iaanz" href="index.jsp">IANNZ<span class="airline">Airlines</span></a>
+      <!--<li class="logo"><img src="https://i.imgur.com/E26Pj54.png"></li>-->
+      <li><a href="#"><i class="fa fa-home"></i>&nbsp; Home</a></li>
+      <li><a href="#"><i class="fa fa-book"></i>&nbsp; Flight Info</a></li>
+      <li><a href="#"><i class="fa fa-users"></i>&nbsp; Modify Flight</a></li>
+    </ul>
+  </nav>
   <div class="wrapper">
     <div class="sidebar">
       <label for="sidebar-toggle" class="toggle-btn">&#9776;</label>
