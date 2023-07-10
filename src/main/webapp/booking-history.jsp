@@ -149,8 +149,8 @@
                 class="booking">Booking</span></a> </li>
         </ul>
       </div>
-      <div class="nav-item"> <a class="nav-link" href="login.jsp" style="color: #7f858a;">Sign in</a> </div>
-      <div class="btn btn-dark"><a href="register.jsp" style="color: #ffffff; font-size: 14px;">Sign up </a></div>
+      <div class="nav-item"> <a class="nav-link" href="login.jsp" style="color: #7f858a;">Login</a> </div>
+      <div class="btn btn-dark"><a href="register.jsp" style="color: #ffffff; font-size: 14px;">Register </a></div>
       
     </div>
   </nav>
