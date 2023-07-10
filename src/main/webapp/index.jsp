@@ -11,55 +11,40 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <script>
-      $(document).ready(function () {
-        // When the user scrolls
-        $(window).scroll(function () {
-          // Check the scroll position
-          var scrollPosition = $(window).scrollTop();
-
-          // Add or remove the 'sticky' class based on scroll position
-          if (scrollPosition >= 50) {
-            $("nav").addClass("sticky");
-          } else {
-            $("nav").removeClass("sticky");
-          }
-        });
-      });
-    </script> -->
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var navbar = document.querySelector("nav");
-        var previousScroll =
-          window.pageYOffset || document.documentElement.scrollTop;
-
-        function toggleSticky() {
-          var currentScroll =
+        document.addEventListener("DOMContentLoaded", function () {
+          var navbar = document.querySelector("nav");
+          var previousScroll =
             window.pageYOffset || document.documentElement.scrollTop;
-
-          if (currentScroll > previousScroll) {
-            // Scrolling down
-            navbar.style.top = `-${navbar.offsetHeight}px`;
-          } else {
-            // Scrolling up
-            navbar.style.top = "0";
+    
+          function toggleSticky() {
+            var currentScroll =
+              window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (currentScroll > previousScroll) {
+              // Scrolling down
+              navbar.style.top = `-${navbar.offsetHeight}px`;
+            } else {
+              // Scrolling up
+              navbar.style.top = "0";
+            }
+    
+            previousScroll = currentScroll;
           }
+    
+          window.addEventListener("scroll", toggleSticky);
+        });
+      </script> -->
 
-          previousScroll = currentScroll;
-        }
-
-        window.addEventListener("scroll", toggleSticky);
-      });
-    </script>
+    
 
     <style>
-      .sticky {
+        /* .sticky {
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 100;
         transition: top 0.3s ease-in-out;
-      }
+      } */
       .box-images {
         display: flex;
         flex-direction: column;
@@ -77,8 +62,10 @@
   </head>
 
   <body>
+    <jsp:include page="navbar.jsp"/>
+
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
       <a class="navbar-brand" href="#">IANNZ Airlines</a>
       <button
         class="navbar-toggler"
@@ -111,7 +98,7 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
 
     <!-- Banner Image -->
     <div class="container">
