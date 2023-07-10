@@ -51,7 +51,7 @@ body {
 
 .container form .registerbtn {
   width: 100%;
-  background-color: #119cff;
+  background-color: #3ca9e2;
   color: white;
   font-size: 16px;
   padding: 16px;
@@ -74,7 +74,7 @@ body {
 }
 
 .container .signin a {
-  color: #119cff;
+  color: dodgerblue;
 }
 </style>
 </head>
@@ -82,7 +82,7 @@ body {
 <div class="container">
   <h1>Register</h1>
   <p>Please fill in this form to create an account.</p>
-  <form action="">
+  <form method="post" action="Register">
     <input type="text" placeholder="First Name" name="fName" id="fName" required>
     <input type="text" placeholder="Last Name" name="lName" id="lName" required>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>

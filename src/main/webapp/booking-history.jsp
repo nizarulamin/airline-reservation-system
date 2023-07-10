@@ -18,6 +18,7 @@
       max-width: 1500px;
       margin: 0 auto;
       padding: 40px;
+      
     }
 
     h1 {
@@ -30,6 +31,7 @@
       width: 100%;
       border-collapse: separate;
       border-spacing: 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     th,
@@ -155,7 +157,7 @@
   <div class="mt-3 d-flex justify-content-center"> <span class="heading">My Booking</span> </div>
 
 
-  <div class="container">
+  <div class="container" style="background-image: url();">
 
     <table>
       <tr>
