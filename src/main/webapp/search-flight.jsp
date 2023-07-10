@@ -88,7 +88,7 @@
       color: #119cff
     }
 
-    .booking {
+    .highlight {
       color: #119cff
     }
 
@@ -134,9 +134,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"> <a class="nav-link" href="index.jsp">Home</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="search-flight.jsp">Flight</a> </li>
-          <li class="nav-item"> <a class="nav-link active" aria-current="page" href="booking-history.jsp"><span
-                class="booking">Booking</span></a> </li>
+          <li class="nav-item"> <a class="nav-link active" aria-current="page" href="search-flight.jsp"><span
+            class="highlight">Flight</span></a> </li>
+          <li class="nav-item"> <a class="nav-link " href="booking-history.jsp">Booking</a> </li>
         </ul>
       </div>
       <div class="nav-item"> <a class="nav-link" href="login.jsp" style="color: #7f858a;">Login</a> </div>
@@ -146,7 +146,7 @@
   </nav>
   <div class="container">
     <h2 class="heading">Flight Search</h2>
-    <form action="search.jsp" method="get">
+    <form action="flight-selection.jsp" method="get">
       <label for="from">From:</label>
       <input type="text" id="from" name="from" placeholder="Departure city" required>
 

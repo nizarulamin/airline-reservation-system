@@ -52,7 +52,7 @@
 
       .forget-password-section .forget-password-form button {
         width: 100%;
-        background-color: #0F3D3E;
+        background-color: #3ca9e2;
         border: #0F3D3E;
         color: #fff;
         font-size: 21px;
@@ -61,8 +61,8 @@
 
       .forget-password-section .forget-password-form button:hover {
         background-color: #fff;
-        color: #0F3D3E;
-        border: 1px solid #0F3D3E;
+        color: red;
+        border: 1px solid red;
       }
 
       .forget-password-section .forget-password-form .back {
@@ -88,7 +88,7 @@
                             </div>
                             <button type="submit" class="btn">Reset Password</button>
                           </form>   
-                      <a href="login.jsp"><p>Back to Login</p> </a>    
+                      <a href="login.jsp" style="color: dodgerblue;"><p>Back to Login</p> </a>    
                     </div>
                 </div>
             </div>

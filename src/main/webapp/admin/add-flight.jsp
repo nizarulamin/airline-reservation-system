@@ -241,6 +241,10 @@
       font-weight: 500;
       color: #000000
     }
+    .heading {
+      font-weight: 700;
+      font-size: 35px
+    }
 </style>
 
 <body>
@@ -269,7 +273,7 @@
     </div>
     <div class="content content-height">
       <center>
-        <h1>Add New Flight</h1>
+        <h1 class="heading">Add New Flight</h1>
       </center>
       <form action="reservation.php" method="post">
         <div class="elem-group">

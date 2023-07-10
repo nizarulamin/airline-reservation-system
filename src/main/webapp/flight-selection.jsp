@@ -93,6 +93,10 @@
       box-shadow: none;
       outline: none
     }
+    .heading {
+      font-weight: 700;
+      font-size: 35px
+    }
   </style>
 </head>
 <body>
@@ -116,7 +120,7 @@
     </div>
   </nav>
   <div class="container">
-    <h1>Flight Selection</h1>
+    <h1 class="heading">Flight Selection</h1>
     <ul class="flight-list">
       <li class="flight-item">
         <h2>Flight 1</h2>
