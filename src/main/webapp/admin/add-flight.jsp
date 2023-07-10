@@ -56,7 +56,7 @@ hr {
 
 button {
   height: 55px;
-  background: #1d77b3;
+  background: #0c6db3;
   border: none;
   color: white;
   font-size: 1.25em;
@@ -106,7 +106,7 @@ body, ul {
 
 /* Style the sidebar */
 .sidebar {
-  background-color: #333;
+  background-color: #0c6db3;
   color: #fff;
   width: 60px; /* Initial width of the collapsed sidebar */
   height: 100vh; /* Make the sidebar full height */
@@ -164,12 +164,8 @@ body, ul {
 }
 
 form {
-<<<<<<< HEAD
   background-color: #cfebff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-=======
-  background-color: #f2f2f2;
->>>>>>> c36cddc3c99a9d9707f443340e10d6b6fd2cafd5
   padding: 15px;
   flex-grow: 1;
   display: grid;
@@ -191,8 +187,9 @@ h1{
     <label for="sidebar-toggle" class="toggle-btn">&#9776;</label>
     <ul>
       <li><h3>Admin</h3></li>
+      <li><a href="index.jsp">Home</a></li>
       <li><a href="admin-passenger-details.jsp">View Passenger Details</a></li>
-      <li><a href="#">Modify Flight</a></li>
+      <li><a href="edit-flight.jsp">Modify Flight</a></li>
     </ul>
   </div>
   <div class="content content-height">

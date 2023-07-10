@@ -51,8 +51,9 @@ body {
 
 .container form .registerbtn {
   width: 100%;
-  background-color: #1d77b3;
+  background-color: #3ca9e2;
   color: white;
+  font-size: 16px;
   padding: 16px;
   margin-top: 10px;
   border: none;
