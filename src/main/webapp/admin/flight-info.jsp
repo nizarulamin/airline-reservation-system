@@ -380,6 +380,14 @@
       -webkit-moz-transform: translate(0px, -10px) scale(1.2);
       transform: translate(0px, -10px) scale(1.2)
     }
+
+    .airline {
+      color: #119cff
+    }
+    .nav-item {
+      font-weight: 500;
+      color: #000000
+    }
   </style>
   <title>Flight Info </title>
   <meta charset="utf-8">
@@ -390,13 +398,19 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 
 </head>
 
 <body>
   <nav>
     <ul>
-      <li class="logo"><img src="https://i.imgur.com/E26Pj54.png"></li>
+      <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> <a
+      class="navbar-brand name" href="index.jsp">IANNZ<span class="airline">Airlines</span></a>
+      <!--<li class="logo"><img src="https://i.imgur.com/E26Pj54.png"></li>-->
       <li><a href="#"><i class="fa fa-home"></i>&nbsp; Home</a></li>
       <li><a href="#"><i class="fa fa-book"></i>&nbsp; Flight Info</a></li>
       <li><a href="#"><i class="fa fa-users"></i>&nbsp; Modify Flight</a></li>
