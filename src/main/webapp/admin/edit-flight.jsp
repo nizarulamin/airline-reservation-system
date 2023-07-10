@@ -250,7 +250,7 @@
       <a class="iaanz" href="index.jsp">IANNZ<span class="airline">Airlines</span></a>
       <!--<li class="logo"><img src="https://i.imgur.com/E26Pj54.png"></li>-->
       <li><a href="index.jsp"><i class="fa fa-home"></i>&nbsp; Home</a></li>
-      <li><a href="flight-info.jsp"><i class="fa fa-book"></i>&nbsp; Passenger Info</a></li>
+      <li><a href="passenger-details.jsp"><i class="fa fa-book"></i>&nbsp; Passenger Info</a></li>
       <li><a href="flight-info.jsp"><i class="fa fa-book"></i>&nbsp; Flight Info</a></li>
       <li><a href="add-flight.jsp"><i class="fa fa-users"></i>&nbsp; Add New Flight</a></li>
       <li><a href="edit-flight.jsp"><i class="fa fa-users"></i>&nbsp; Modify Flight</a></li>
