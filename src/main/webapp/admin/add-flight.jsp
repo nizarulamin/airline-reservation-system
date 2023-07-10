@@ -241,10 +241,6 @@
       font-weight: 500;
       color: #000000
     }
-    .heading {
-      font-weight: 700;
-      font-size: 35px
-    }
 </style>
 
 <body>
@@ -253,7 +249,8 @@
       <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> 
       <a class="iaanz" href="index.jsp">IANNZ<span class="airline">Airlines</span></a>
       <!--<li class="logo"><img src="https://i.imgur.com/E26Pj54.png"></li>-->
-      <li><a href="index.jsp"><i class="fa fa-home"></i>&nbsp; Home</a></li>
+      <li><a href="passenger-details.jsp"><i class="fa fa-home"></i>&nbsp; Home</a></li>
+      <li><a href="flight-info.jsp"><i class="fa fa-book"></i>&nbsp; Passenger Info</a></li>
       <li><a href="flight-info.jsp"><i class="fa fa-book"></i>&nbsp; Flight Info</a></li>
       <li><a href="add-flight.jsp"><i class="fa fa-book"></i>&nbsp; Add New Flight</a></li>
       <li><a href="edit-flight.jsp"><i class="fa fa-users"></i>&nbsp; Modify Flight</a></li>
@@ -273,7 +270,7 @@
     </div>
     <div class="content content-height">
       <center>
-        <h1 class="heading">Add New Flight</h1>
+        <h1>Add New Flight</h1>
       </center>
       <form action="reservation.php" method="post">
         <div class="elem-group">
