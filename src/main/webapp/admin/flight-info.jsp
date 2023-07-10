@@ -25,7 +25,7 @@
 
     .center {
       margin-left: auto;
-      margin-right: auto;
+      margin-right: 900px;
     }
 /*<!-- Old Button Submit-->*/
     input[type="submit"] {
@@ -104,9 +104,11 @@
     nav ul li a:hover:before {
       width: 95%;
     }
-    
+    /*Adjust table box*/
     .wrapper {
-      margin-left: 230px;
+      width: auto;
+      text-align: center;
+      
     }
 
     .section {
@@ -153,7 +155,7 @@
       background: #ffffff;
       border-top: 3px solid #d2d6de;
       margin-bottom: 30px;
-      width: 500px;
+      width: 900px;
       height: 500px;
       text-align: center;
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
