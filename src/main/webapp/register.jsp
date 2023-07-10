@@ -82,13 +82,13 @@ body {
 <div class="container">
   <h1>Register</h1>
   <p>Please fill in this form to create an account.</p>
-  <form method="post" action="Register">
-    <input type="text" placeholder="First Name" name="fName" id="fName" required>
-    <input type="text" placeholder="Last Name" name="lName" id="lName" required>
+  <form method="post" action="Registration">
+    <input type="text" placeholder="First Name" name="firstName" id="fName" required>
+    <input type="text" placeholder="Last Name" name="lastName" id="lName" required>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
     <input type="number" placeholder="Phone Number" name="phone" id="phone" required>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <input type="password" placeholder="Confirm Password" name="psw-confirm" id="psw-repeat" required>
+    <input type="password" placeholder="Enter Password" name="password" id="psw" required>
+    <input type="password" placeholder="Confirm Password" name="confirmPassword" id="psw-repeat" required>
     <button type="submit" class="registerbtn">Register</button>
   </form>
   <div class="signin">

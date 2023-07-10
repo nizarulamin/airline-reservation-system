@@ -16,6 +16,18 @@
   	<description></description>
   	<servlet-class>com.AirlineReservationSystem.controller.Login</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Registration</servlet-name>
+  	<display-name>Registration</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.Registration</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>Regsitration</servlet-name>
+  	<display-name>Regsitration</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.Regsitration</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Register</servlet-name>
   	<url-pattern>/Register</url-pattern>
@@ -23,5 +35,13 @@
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Registration</servlet-name>
+  	<url-pattern>/Registration</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Regsitration</servlet-name>
+  	<url-pattern>/Regsitration</url-pattern>
   </servlet-mapping>
 </web-app>

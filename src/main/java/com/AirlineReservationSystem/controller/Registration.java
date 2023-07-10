@@ -1,9 +1,9 @@
 package com.AirlineReservationSystem.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,14 +14,13 @@ import com.AirlineReservationSystem.model.UserDB;
 /**
  * Servlet implementation class Register
  */
-@WebServlet("/Register")
-public class Register extends HttpServlet {
+public class Registration extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Register() {
+	public Registration() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -40,7 +39,7 @@ public class Register extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		// PrintWriter out = response.getWriter();
+		PrintWriter out = response.getWriter();
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
@@ -55,9 +54,9 @@ public class Register extends HttpServlet {
 		String s1 = ud.insertUser(rb);
 
 		System.out.println(s1);
-		// out.println(name);
-		// out.println(email);
-		// out.println(password);
+		out.println(name);
+		out.println(email);
+		out.println(password);
 	}
 
 	/**
