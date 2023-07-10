@@ -125,11 +125,6 @@
       width: 100%;
       min-width: 100%
     }
-
-    body {
-      background-color: #f9f9fa
-    }
-
     .flex {
       -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
