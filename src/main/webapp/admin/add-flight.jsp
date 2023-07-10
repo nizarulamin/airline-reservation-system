@@ -230,7 +230,8 @@
 
   /* Set a fixed height for the content container */
   .content-height {
-    height: calc(100vh - 40px);
+    height: calc(vh - 40px);
+    margin-top: -80px;
     /* Subtract the padding of the content container */
   }
   .airline {
@@ -248,9 +249,11 @@
       <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> 
       <a class="iaanz" href="index.jsp">IANNZ<span class="airline">Airlines</span></a>
       <!--<li class="logo"><img src="https://i.imgur.com/E26Pj54.png"></li>-->
-      <li><a href="#"><i class="fa fa-home"></i>&nbsp; Home</a></li>
-      <li><a href="#"><i class="fa fa-book"></i>&nbsp; Flight Info</a></li>
-      <li><a href="#"><i class="fa fa-users"></i>&nbsp; Modify Flight</a></li>
+      <li><a href="passenger-details.jsp"><i class="fa fa-home"></i>&nbsp; Home</a></li>
+      <li><a href="flight-info.jsp"><i class="fa fa-book"></i>&nbsp; Passenger Info</a></li>
+      <li><a href="flight-info.jsp"><i class="fa fa-book"></i>&nbsp; Flight Info</a></li>
+      <li><a href="add-flight.jsp"><i class="fa fa-book"></i>&nbsp; Add New Flight</a></li>
+      <li><a href="edit-flight.jsp"><i class="fa fa-users"></i>&nbsp; Modify Flight</a></li>
     </ul>
   </nav>
   <div class="wrapper">
