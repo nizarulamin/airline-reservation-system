@@ -76,24 +76,58 @@ body {
 .container .signin a {
   color: dodgerblue;
 }
+.container form #wrong_pass_alert{
+	text-align: center;
+}
 </style>
 </head>
+<script>  
+function validate_password() {
+	 
+    var pass = document.getElementById('psw').value;
+    var confirm_pass = document.getElementById('psw-repeat').value;
+    if (pass != confirm_pass) {
+        document.getElementById('wrong_pass_alert').style.color = 'red';
+        document.getElementById('wrong_pass_alert').innerHTML
+            = 'Use same password';
+        document.getElementById('register').disabled = true;
+        document.getElementById('register').style.opacity = (0.4);
+    } else {
+        document.getElementById('wrong_pass_alert').style.color = 'green';
+        document.getElementById('wrong_pass_alert').innerHTML =
+            'Password Matched';
+        document.getElementById('register').disabled = false;
+        document.getElementById('register').style.opacity = (1);
+    }
+}
+
+function wrong_pass_alert() {
+    if (document.getElementById('psw').value != "" &&
+        document.getElementById('psw-repeat').value != "") {
+        alert("Account successfully created!");
+    } else {
+        alert("Please fill all the fields");
+    }
+}
+</script>  
 <body>
 <div class="container">
   <h1>Register</h1>
   <p>Please fill in this form to create an account.</p>
   <form method="post" action="Registration">
-    <input type="text" placeholder="First Name" name="firstName" id="fName" required>
-    <input type="text" placeholder="Last Name" name="lastName" id="lName" required>
+    <input type="text" placeholder="First Name" name="fName" id="fName" required>
+    <input type="text" placeholder="Last Name" name="lName" id="lName" required>
     <input type="text" placeholder="Enter Email" name="email" id="email" required>
-    <input type="number" placeholder="Phone Number" name="phone" id="phone" required>
-    <input type="password" placeholder="Enter Password" name="password" id="psw" required>
-    <input type="password" placeholder="Confirm Password" name="confirmPassword" id="psw-repeat" required>
-    <button type="submit" class="registerbtn">Register</button>
+    <input type="text" placeholder="Phone Number" name="phone" id="phone" required>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw"  required>
+    <input type="password" placeholder="Confirm Password" name="psw-confirm" id="psw-repeat"  required onkeyup="validate_password()">
+    <span id="wrong_pass_alert" ></span>
+    <button type="submit" id="register" class="registerbtn" onclick="wrong_pass_alert()">Register</button>
   </form>
   <div class="signin">
     <p>Already have an account? <a href="login.jsp">Sign in</a>.</p>
   </div>
 </div>
+
 </body>
 </html>
