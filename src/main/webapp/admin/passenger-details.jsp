@@ -438,7 +438,7 @@
           <!--<div style="text-align:center;">
             <input type="submit" style="width: 305px; height: 40px; text-align: center;" id="login" value="Add Flight">
           </div>-->
-          <button class="button">Add Flight</button>
+          <a href="add-flight.jsp"><button class="button">Add Flight</button></a>
           <P></P>
         </div>
 
