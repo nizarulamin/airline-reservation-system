@@ -37,6 +37,6 @@ public class UserDB {
 			ex.printStackTrace();
 		}
 
-		return "Success";
+		return "success";
 	}
 }
