@@ -124,22 +124,22 @@
     <ul class="flight-list">
       <li class="flight-item">
         <h2>Flight 1</h2>
-        <p>Origin: City A</p>
-        <p>Destination: City B</p>
+        <p>Origin: Penang</p>
+        <p>Destination: Langkawi</p>
         <p>Departure Time: 10:00 AM</p>
         <p>Arrival Time: 12:00 PM</p>
       </li>
       <li class="flight-item">
         <h2>Flight 2</h2>
-        <p>Origin: City C</p>
-        <p>Destination: City D</p>
+        <p>Origin: Perthlis</p>
+        <p>Destination: London</p>
         <p>Departure Time: 1:00 PM</p>
         <p>Arrival Time: 3:00 PM</p>
       </li>
       <li class="flight-item">
         <h2>Flight 3</h2>
-        <p>Origin: City E</p>
-        <p>Destination: City F</p>
+        <p>Origin: Newcastle</p>
+        <p>Destination: Aloq Staq</p>
         <p>Departure Time: 4:00 PM</p>
         <p>Arrival Time: 6:00 PM</p>
       </li>

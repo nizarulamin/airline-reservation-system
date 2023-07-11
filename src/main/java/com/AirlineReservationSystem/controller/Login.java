@@ -45,7 +45,7 @@ public class Login extends HttpServlet {
 		String s1 = ud.readData(user);
 
 		if (s1.equalsIgnoreCase("success")) {
-			response.sendRedirect("index.jsp");
+			response.sendRedirect("http://localhost:8080/AirlineReservationSystem/index.jsp");
 		} else {
 			out.println("Invalid Email or Password");
 		}
