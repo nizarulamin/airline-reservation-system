@@ -4,11 +4,15 @@
 <head>
   <title>Airline Reservation System</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    /> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- <script>
+  <script>
         document.addEventListener("DOMContentLoaded", function () {
           var navbar = document.querySelector("nav");
           var previousScroll =
@@ -31,18 +35,22 @@
     
           window.addEventListener("scroll", toggleSticky);
         });
-      </script> -->
+      </script>
 
 
 
   <style>
-    /* .sticky {
+    /* body {
+      font-family: "Poppins";
+      font-size: 22px;
+    } */
+    .sticky {
         position: fixed;
         top: 0;
         width: 100%;
         z-index: 100;
         transition: top 0.3s ease-in-out;
-      } */
+      }
     .box-images {
       display: flex;
       flex-direction: column;
@@ -103,9 +111,9 @@
 </head>
 
 <body>
-  <jsp:include page="navbar.jsp" />
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> <a
+  <!-- <jsp:include page="navbar.jsp" /> -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
+    <div class="container-fluid"><img src="./images/logo.png" height="50px" width="50px" /> <a
         class="navbar-brand name" href="index.jsp">IAANZ<span class="airline">Airlines</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
