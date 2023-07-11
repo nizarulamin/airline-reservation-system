@@ -35,18 +35,26 @@ public class Registration extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		PrintWriter out = response.getWriter();
-		String name = request.getParameter("name");
+		String fName = request.getParameter("fName");
+		String lName = request.getParameter("lName");
+		String phone = request.getParameter("phone");
 		String email = request.getParameter("email");
-		String password = request.getParameter("password");
+		String password = request.getParameter("psw");
 
 		User rb = new User();
 
-		rb.setName(name);
+		rb.setfName(fName);
+		rb.setlName(lName);
+		rb.setPhone(phone);
 		rb.setEmail(email);
 		rb.setPassword(password);
 
@@ -54,33 +62,13 @@ public class Registration extends HttpServlet {
 		String s1 = ud.insertUser(rb);
 
 		System.out.println(s1);
-		out.println(name);
-		out.println(email);
-		out.println(password);
-	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
-//	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-//			throws ServletException, IOException {
-//		// TODO Auto-generated method stub
-//		doGet(request, response);
-//		String name = request.getParameter("fName");
-//		String email = request.getParameter("email");
-//		String password = request.getParameter("psw");
-//
-//		User rb = new User();
-//
-//		rb.setName(name);
-//		rb.setEmail(email);
-//		rb.setPassword(password);
-//
-//		UserDB ud = new UserDB();
-//		String s1 = ud.insertUser(rb);
-//
-//		System.out.println(s1);
-//	}
+		if (s1.equalsIgnoreCase("Data Insert Successfully")) {
+			response.sendRedirect("http://localhost:8080/AirlineReservationSystem/login.jsp");
+		} else {
+			out.println("Invalid Email or Password");
+		}
+
+	}
 
 }
