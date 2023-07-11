@@ -185,7 +185,7 @@
   <!-- partial:index.partial.html -->
   <div id="login-form-wrap">
     <h3>Login</h3>
-    <form id="login-form" action="Login">
+    <form id="login-form" method="post" action="Login">
       <p>
         <input type="text" style="font-size:13px;" id="username" name="email" placeholder="Email" required><i
           class="validation"><span></span><span></span></i>
@@ -199,13 +199,13 @@
         <input type="submit" id="login" value="Login">
       </p>
 
-      <a href="#" style="font-size:13px;" id="forgot">Forgot Password</a>
+      <a href="#" style="font-size:13px;" id="forgot-password.jsp">Forgot Password</a>
 
       <!--<a href="#" style="font-size:13px; text-align:right;">Forgot Password</a><br>-->
       <p></p>
     </form>
     <div id="create-account-wrap">
-      <p>Not a member? <a href="#">Create Account</a>
+      <p>Not a member? <a href="register.jsp">Create Account</a>
       <p>
     </div><!--create-account-wrap-->
   </div><!--login-form-wrap-->
