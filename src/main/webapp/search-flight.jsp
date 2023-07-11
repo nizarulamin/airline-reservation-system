@@ -168,6 +168,12 @@
         <option value="5">5</option>
       </select>
 
+      <label for="cabin-class">Cabin Class:</label>
+      <select id="cabin-class" name="cabin-class">
+        <option value="economy">Economy</option>
+        <option value="business">Business</option>
+      </select>
+      
       <input type="submit" value="Search Flights">
     </form>
   </div>

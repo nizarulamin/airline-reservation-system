@@ -261,7 +261,7 @@
               align-self: stretch;
             ">
           <p style="font-size: 18px">The Bund, Shanghai</p>
-          <p style="font-size: 16px">China’s most international city</p>
+          <p style="font-size: 16px">China most international city</p>
         </div>
       </div>
       <div class="col-md-4 box-images" style="">
@@ -273,14 +273,14 @@
             " />
         <div>
           <p style="font-size: 18px">The Bund, Shanghai</p>
-          <p style="font-size: 16px">China’s most international city</p>
+          <p style="font-size: 16px">China most international city</p>
         </div>
       </div>
       <div class="col-md-4 box-images" style="">
         <img src="./images/kyoto.png" class="img-fluid" alt="Image 3" style="align-self: stretch" />
         <div>
           <p style="font-size: 18px">The Bund, Shanghai</p>
-          <p style="font-size: 16px">China’s most international city</p>
+          <p style="font-size: 16px">China most international city</p>
         </div>
       </div>
     </div>
@@ -295,7 +295,7 @@
         <img src="./images/kenya.png" class="img-fluid" alt="Full-width Image" />
         <div>
           <p style="font-size: 18px">The Bund, Shanghai</p>
-          <p style="font-size: 16px">China’s most international city</p>
+          <p style="font-size: 16px">China most international city</p>
         </div>
       </div>
     </div>
