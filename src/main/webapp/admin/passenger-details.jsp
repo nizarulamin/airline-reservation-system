@@ -38,7 +38,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      background-color: #3b5865;
+      background-color: #7b8c94;
     }
     nav ul li {
       list-style: none;
