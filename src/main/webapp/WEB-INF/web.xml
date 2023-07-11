@@ -28,6 +28,18 @@
   	<description></description>
   	<servlet-class>com.AirlineReservationSystem.controller.Regsitration</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>flight</servlet-name>
+  	<display-name>flight</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.flight</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddFlight</servlet-name>
+  	<display-name>AddFlight</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.AddFlight</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Register</servlet-name>
   	<url-pattern>/Register</url-pattern>
@@ -43,5 +55,13 @@
   <servlet-mapping>
   	<servlet-name>Regsitration</servlet-name>
   	<url-pattern>/Regsitration</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>flight</servlet-name>
+  	<url-pattern>/flight</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddFlight</servlet-name>
+  	<url-pattern>/AddFlight</url-pattern>
   </servlet-mapping>
 </web-app>

@@ -258,14 +258,7 @@
   <div class="wrapper">
     <div class="sidebar">
       <label for="sidebar-toggle" class="toggle-btn">&#9776;</label>
-      <ul>
-        <li>
-          <h3>Admin</h3>
-        </li>
-        <li><a href="index.jsp">Home</a></li>
-        <li><a href="passenger-details.jsp">Passenger Details</a></li>
-        <li><a href="edit-flight.jsp">Modify Flight</a></li>
-      </ul>
+     
     </div>
     <div class="content content-height">
       <center>

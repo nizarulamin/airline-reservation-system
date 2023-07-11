@@ -271,7 +271,7 @@
       <center>
         <h1>Add New Flight</h1>
       </center>
-      <form action="reservation.php" method="post">
+      <form action="../AddFlight" method="post">
         <div class="elem-group">
           <label for="flightNo">Flight No</label>
           <input type="text" id="flightNo" name="flight_no" placeholder="Flight No" required>
@@ -289,7 +289,7 @@
         </div>
         <div class="elem-group inlined">
           <label for="From">To</label>
-          <select id="From" name="From" required>
+          <select id="From" name="To" required>
             <option value="">Destination</option>
             <option value="Penang">Penang</option>
             <option value="Perlis">Perlis</option>
@@ -298,11 +298,11 @@
         </div>
         <div class="elem-group inlined">
           <label for="departure">Departure</label>
-          <input type="time" id="departure" name="depart" required>
+          <input type="text" id="departure" name="depart" required>
         </div>
         <div class="elem-group inlined">
           <label for="arrival">Arrival</label>
-          <input type="time" id="arrival" name="arrive" required>
+          <input type="text" id="arrival" name="arrive" required>
         </div>
 
         <div class="elem-group ">
@@ -313,12 +313,13 @@
           <label for="price">Price</label>
           <input type="number" id="price" name="price" placeholder="Price" required>
         </div>
-
-      </form>
-      <center>
-        <button type="submit">Add New Flight</button>
+         <center>
+        <button type="submit" value="AddFlight">Add New Flight</button>
         <button class="cancel" type="reset">Cancel</button>
       </center>
+
+      </form>
+     
     </div>
   </div>
 </body>

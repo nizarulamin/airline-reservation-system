@@ -355,6 +355,7 @@
       <li><a href="flight-info.jsp"><i class="fa fa-book"></i>&nbsp; Flight Info</a></li>
       <li><a href="add-flight.jsp"><i class="fa fa-book"></i>&nbsp; Add New Flight</a></li>
       <li><a href="edit-flight.jsp"><i class="fa fa-users"></i>&nbsp; Modify Flight</a></li>
+      <li><a href="login.jsp"><i class="fa fa-users"></i>&nbsp; Logout</a></li>
     </ul>
   </nav>
 
