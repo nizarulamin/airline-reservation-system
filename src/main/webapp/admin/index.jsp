@@ -74,7 +74,7 @@
       width: 300px;
     }
 
-    img {
+    homepage {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -107,9 +107,9 @@ and is wrapped around the whole page content, except for the footer in this exam
       <h1><b>WELCOME TO IAANZ AIRLINE</b></h1>
       <p>You are logged in as <span class="w3-tag">Ielia</span></p>
     </header>
-
-    <img src="./images/airplane-flight.png" class="rounded mx-auto d-block img-fluid" alt="Banner Image" width="60%" />
-
+<div class ="homepage">
+    <img src="../images/airplane-flight.png" class="rounded mx-auto d-block img-fluid" alt="Banner Image" />
+</div>
     <!-- END w3-content -->
   </div>
 

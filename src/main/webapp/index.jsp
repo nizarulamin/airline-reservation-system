@@ -15,11 +15,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<<<<<<< HEAD
+
+
+  <style>
+    body {
+       background-color: #cfebff;
+    } 
+    .sticky {
+=======
     <style>
       body {
         padding-top: 80px; /* Add padding to the top to accommodate the navbar */
       }
       .sticky {
+>>>>>>> 2364877d58cb5a042a96d8505fddf6cc91f9f7a8
         position: fixed;
         top: 0;
         width: 100%;
@@ -78,12 +88,24 @@
         background-color: #000;
       }
 
+<<<<<<< HEAD
+    .btn:focus {
+      box-shadow: none;
+      outline: none
+      
+    }
+    
+   
+  </style>
+</head>
+=======
       .btn:focus {
         box-shadow: none;
         outline: none;
       }
     </style>
   </head>
+>>>>>>> 2364877d58cb5a042a96d8505fddf6cc91f9f7a8
 
   <body>
     <jsp:include page="navbar-before.jsp" />

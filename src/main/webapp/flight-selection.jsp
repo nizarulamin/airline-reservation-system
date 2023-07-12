@@ -11,7 +11,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: aqua;
+      background-color: #cfebff;
     }
 
     h1 {
@@ -30,14 +30,14 @@
     }
 
     .flight-item {
-      border: 1px solid #ccc;
+      border: 1px solid green;
       margin-bottom: 10px;
       padding: 10px;
       cursor: pointer;
     }
 
     .flight-item:hover {
-      background-color: #f9f9f9;
+      background-color: #90EE90;
     }
 
     .flight-item h2 {
