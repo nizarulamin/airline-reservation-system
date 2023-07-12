@@ -134,6 +134,7 @@
 </head>
 
 <body>
+  <jsp:include page="navbar-after.jsp"/>
   <!-- Top navigation -->
   <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> <a

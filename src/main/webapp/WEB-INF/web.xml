@@ -5,12 +5,6 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  	<servlet-name>Register</servlet-name>
-  	<display-name>Register</display-name>
-  	<description></description>
-  	<servlet-class>com.AirlineReservationSystem.controller.Register</servlet-class>
-  </servlet>
-  <servlet>
   	<servlet-name>Login</servlet-name>
   	<display-name>Login</display-name>
   	<description></description>
@@ -23,15 +17,11 @@
   	<servlet-class>com.AirlineReservationSystem.controller.Registration</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>Regsitration</servlet-name>
-  	<display-name>Regsitration</display-name>
-  	<description></description>
-  	<servlet-class>com.AirlineReservationSystem.controller.Regsitration</servlet-class>
-  </servlet>
-  <servlet-mapping>
   	<servlet-name>Register</servlet-name>
-  	<url-pattern>/Register</url-pattern>
-  </servlet-mapping>
+  	<display-name>Register</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.Register</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
@@ -41,7 +31,8 @@
   	<url-pattern>/Registration</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>Regsitration</servlet-name>
-  	<url-pattern>/Regsitration</url-pattern>
+  	<servlet-name>Register</servlet-name>
+  	<url-pattern>/Register</url-pattern>
   </servlet-mapping>
+
 </web-app>

@@ -35,6 +35,7 @@
   });
 </script>
 <style>
+  
   .sticky {
     position: fixed;
     top: 0;
@@ -126,18 +127,29 @@
         <li class="nav-item">
           <a class="nav-link" href="search-flight.jsp">Flight</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="booking-history.jsp">Booking</a>
-        </li>
       </ul>
     </div>
-    <div class="nav-item">
-      <a class="nav-link" href="login.jsp" style="color: #7f858a">Login</a>
-    </div>
-    <div class="btn btn-dark">
-      <a href="register.jsp" style="color: #ffffff; font-size: 14px"
-        >Register
-      </a>
+    <div class="ml-auto">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa fa-user"></i>
+            <span id="userFirstName">John</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">My Booking</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Logout</a>
+        </div>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
