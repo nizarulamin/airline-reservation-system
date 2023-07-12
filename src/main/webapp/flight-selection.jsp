@@ -138,18 +138,20 @@
 								ResultSet rs = st.executeQuery(str);
 								while(rs.next()){
 						%>
-   
-   
-    <ul class="flight-list">
-   
-      <li class="flight-item">
-        <h2>Flight <%=rs.getInt("idflight") %></h2>
-        <p>Origin: <%=rs.getString("flight_origin") %></p>
-        <p>Destination: <%=rs.getString("flight_destination") %></p>
-        <p>Departure Date: <%=rs.getString("flight_departure") %></p>
-        <p>Arrival Time: <%=rs.getString("flight_time") %></p>
-      </li>
-      <li class="flight-item">
+			    <ul class="flight-list">
+			   
+			      <li class="flight-item">
+			        <h2>Flight <%=rs.getInt("idflight") %></h2>
+			        <p>Origin: <%=rs.getString("flight_origin") %></p>
+			        <p>Destination: <%=rs.getString("flight_destination") %></p>
+			        <p>Departure Date: <%=rs.getString("flight_departure") %></p>
+			        <p>Arrival Time: <%=rs.getString("flight_time") %></p>
+			      </li>
+			       <% } // while loop complete 
+			                }
+			              catch(Exception e){ } 
+			              %>
+      <!-- <li class="flight-item">
         <h2>Flight 2</h2>
         <p><i class="fas fa-plane-departure"></i>Origin: Perthlis</p>
         <p><i class="fas fa-plane-arrival"></i>Destination: London</p>
@@ -163,7 +165,7 @@
         <p>Departure Time: 4:00 PM</p>
         <p>Arrival Time: 6:00 PM</p>
       </li>
-    </ul>
+    </ul> -->
     <a class="continue-btn" href="#">Continue</a>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
