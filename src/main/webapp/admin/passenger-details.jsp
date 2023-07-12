@@ -426,12 +426,14 @@
                                     <th>Email</th>
                                     <th>Phone No.</th>
                                   </tr>
-                                  <% try { //Retrieve data from database Class.forName("com.mysql.jdbc.Driver");
-                                    //Database punya link, username, password Connection
-                                    con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root"
-                                    , "January_97" ); //above statement ,ydb exist mysql Statement
-                                    st=con.createStatement(); //display all String str="select * from user" ; ResultSet
-                                    rs=st.executeQuery(str); while(rs.next()){ %>
+                                  <% try { //Retrieve data from database 
+                                	 Class.forName("com.mysql.jdbc.Driver");
+                                    //Database punya link, username, password 
+                                    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root"
+                                    , "January_97" ); //above statement ,ydb exist mysql 
+                                    Statement st=con.createStatement(); //display all 
+                                    String str="select * from user" ; 
+                                    ResultSet rs=st.executeQuery(str); while(rs.next()){ %>
                                     <tr>
                                       <td>
                                         <%=rs.getInt("iduser") %>
@@ -450,7 +452,10 @@
                                       </td>
                                     </tr>
 
-                                    <% }// while loop complete }catch(Exception e){ } %>
+                                    <% }// while loop complete 
+                                    }catch(Exception e){
+                                    	
+                                    } %>
                                 </tbody>
                               </table>
                             </div>

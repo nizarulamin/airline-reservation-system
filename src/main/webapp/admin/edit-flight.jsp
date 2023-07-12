@@ -278,11 +278,16 @@
               </center>
               <form action="UpdateFlight" method="post">
 
-                <% try { //Retrieve data from database Class.forName("com.mysql.jdbc.Driver"); //Database punya link,
-                  username, password Connection
-                  con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root" , "January_97" );
-                  //above statement ,ydb exist mysql Statement st=con.createStatement(); //display all String
-                  str="select * from flight where idflight=?" ; ResultSet rs=st.executeQuery(str); while(rs.next()){ %>
+                <% try { //Retrieve data from database 
+                	Class.forName("com.mysql.jdbc.Driver"); //Database punya link, username, password 
+                  Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root" , "January_97" );
+                  //above statement ,ydb exist mysql 
+                  Statement st=con.createStatement(); //display all 
+                  String str="select * from flight where idflight=?" ; 
+                  ResultSet rs=st.executeQuery(str); 
+                  while(rs.next()){ 
+                  %>
+                  
                   <input type="hidden" value="<%=rs.getInt(" idflight") %>"></input>
                   <div class="elem-group">
                     <label for="flightNo">Flight No</label>
@@ -318,7 +323,11 @@
                     <label for="price">Price</label>
                     <input type="number" id="price" name="price" placeholder="Price" required>
                   </div>
-                  <% }// while loop complete }catch(Exception e){ } %>
+                  
+                  <% }// while loop complete 
+                                    }catch(Exception e){
+                                    	
+                                    } %>
               </form>
               <center>
                 <button type="submit">Submit</button>
