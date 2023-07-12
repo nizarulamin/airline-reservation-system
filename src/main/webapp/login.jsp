@@ -191,12 +191,12 @@
     <form id="login-form" method="post" action="Login">
       <p>
         <input type="text" style="font-size:13px;" id="username" name="email" placeholder="Email" required><i
-          class="validation"><span></span><span></span></i>
+          class="validation"></i>
       </p>
       <p>
 
-        <input type="password" style="font-size:12px;" id="pswd" name="password" placeholder="Password" required><i
-          class="validation"><span></span><span></span></i>
+        <input type="text" style="font-size:12px;" id="pswd" name="password" placeholder="Password" required><i
+          class="validation"></i>
       </p>
       <p>
         <input type="submit" id="login" value="Login">

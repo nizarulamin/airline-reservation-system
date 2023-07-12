@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Flight Search</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="file:///C:/Users/User/eclipse-workspace/JavaWebApp/src/main/images/AirAsia_New_Logo.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    />
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: powderblue;
-        padding-top: 80px; /* Add padding to the top to accommodate the navbar */
-      }
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Search</title>
+  <link rel="icon" type="image/x-icon" href="file:///C:/Users/User/eclipse-workspace/JavaWebApp/src/main/images/AirAsia_New_Logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #cfebff;
+    }
 
       .header h1 {
         text-align: center;
@@ -207,9 +199,87 @@
         <input type="submit" value="Search Flights" />
       </form>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
-  </body>
+  </nav>
+  <div class="container">
+    <h2 class="heading">Flight Search</h2>
+    <form action="flight-selection.jsp" method="get">
+      <label for="from">From:</label>
+      <select type="text" id="from" name="from" placeholder="Departure city" required>
+      <option value="" onkeyup="myFunction()">Origin</option>
+						<option value="AOR">Alor Star AOR</option>
+						<option value="IPH">Ipoh IPH</option>
+						<option value="JHB">Johor Bahru JHB</option>
+						<option value="BKI">Kota Kinabalu BKI</option>
+						<option value="KBR">Kota Bharu KBR</option>
+						<option value="KUL">Kuala Lumpur KUL</option>
+						<option value="KCH">Kuching KCH</option>
+						<option value="LGK">Langkawi LGK</option>
+						<option value="PEN">Penang PEN</option>
+						<option value="PLS">Perlis PLS</option>
+						<option value="SZB">Subang SZB</option>
+						<option value="TGG">Terengganu TGG</option></select>
+
+      <label for="to">To:</label>
+      <select type="text" id="to" name="to" placeholder="Destination city" required>
+      <option value="">Destination</option>
+						<option value="AOR">Alor Star AOR</option>
+						<option value="IPH">Ipoh IPH</option>
+						<option value="JHB">Johor Bahru JHB</option>
+						<option value="BKI">Kota Kinabalu BKI</option>
+						<option value="KBR">Kota Bharu KBR</option>
+						<option value="KUL">Kuala Lumpur KUL</option>
+						<option value="KCH">Kuching KCH</option>
+						<option value="LGK">Langkawi LGK</option>
+						<option value="PEN">Penang PEN</option>
+						<option value="PLS">Perlis PLS</option>
+						<option value="SZB">Subang SZB</option>
+						<option value="TGG">Terengganu TGG</option></select>
+
+      <label for="departure-date">Departure Date:</label>
+      <input type="date" id="departure-date" name="departure-date" required>
+
+      <label for="return-date">Return Date:</label>
+      <input type="date" id="return-date" name="return-date" required>
+
+      <label for="passengers">Passengers:</label>
+      <select id="passengers" name="passengers">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <label for="cabin-class">Cabin Class:</label>
+      <select id="cabin-class" name="cabin-class">
+        <option value="economy">Economy</option>
+        <option value="business">Business</option>
+      </select>
+      
+      <input type="submit" value="Search Flights">
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+	<script>
+	function myFunction() {
+	    var input, filter, ul, li, a, i, txtValue;
+	    input = document.getElementById("myInput");
+	    filter = input.value.toUpperCase();
+	    ul = document.getElementById("myUL");
+	    li = ul.getElementsByTagName("li");
+	    for (i = 0; i < li.length; i++) {
+	        a = li[i].getElementsByTagName("a")[0];
+	        txtValue = a.textContent || a.innerText;
+	        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+	            li[i].style.display = "";
+	        } else {
+	            li[i].style.display = "none";
+	        }
+	    }
+	}
+	</script>
+</body>
 </html>

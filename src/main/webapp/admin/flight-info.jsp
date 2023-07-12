@@ -393,7 +393,7 @@
 						    	//Retrieve data from database
 						    	Class.forName("com.mysql.jdbc.Driver");
 								//Database punya link, username, password
-								Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectairlines", "root", "Bbjkchm@1512");
+								Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "January_97");
 								//above statement ,ydb exist mysql
 								Statement st = con.createStatement();
 								//display all
@@ -402,14 +402,15 @@
 								while(rs.next()){
 						%>
                           <tr>
-                            <td><%=rs.getInt("flightId") %></td>
+                            <td><%=rs.getInt("flight_id") %></td>
                             <td><%=rs.getString("flight_no") %></td>
                             <td><%=rs.getString("flight_origin") %></td>
                             <td><%=rs.getString("flight_destination") %></td>
-                            <td><%=rs.getString("flight_departure") %></td>
-                            <td><%=rs.getString("flight_return") %></td>
-                            <td><%=rs.getString("flight_time") %></td>  
-                            <td><%=rs.getString("flight_price") %></td>                    
+                            <td><%=rs.getString("departure_date") %></td>
+                            <td><%=rs.getString("return_date") %></td>
+                            <td><%=rs.getString("deprture_time") %></td>  
+                            <td><%=rs.getString("arrival_time") %></td>  
+                            <td><%=rs.getString("flight_fares") %></td>                       
                             <td><a href="admin-edit-flight.jsp?id=<%=rs.getInt("flightId") %>"><button class="badge bg-red" >EDIT</button></a></td>
                           </tr>
                          

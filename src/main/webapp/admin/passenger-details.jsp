@@ -7,6 +7,10 @@
 
         <head>
           <style>
+          
+          body{
+          background-color: #cfebff;
+          }
             /*<!-- Table-->*/
             table {
               font-family: arial, sans-serif;
@@ -486,7 +490,7 @@
 
 
           </div>
-
+ 
         </body>
 
         </html>

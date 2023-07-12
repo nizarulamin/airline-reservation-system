@@ -72,8 +72,8 @@ public class Login extends HttpServlet {
 
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/iannz?useSSL=false", "root",
-					"@Root1153");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project?useSSL=false", "root",
+					"January_97");
 			PreparedStatement pst = con.prepareStatement(
 					"select email,password from user where email='" + email + "' and password='" + password + "'");
 			ResultSet rs = pst.executeQuery();
