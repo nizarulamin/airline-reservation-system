@@ -45,33 +45,33 @@ public class AddFlighter extends HttpServlet {
 		doGet(request, response);
 		PrintWriter out = response.getWriter();
 		String flight_no = request.getParameter("flight_no");
-		String From = request.getParameter("From");
-		String To = request.getParameter("To");
-		String depart = request.getParameter("depart");
-		String arrive = request.getParameter("arrive");
-		String Date = request.getParameter("Date");
-		String Price = request.getParameter("Price");
+		String flight_origin = request.getParameter("From");
+		String flight_destination = request.getParameter("To");
+		String flight_departure = request.getParameter("depart");
+		String flight_return = request.getParameter("return");
+		String flight_time = request.getParameter("time");
+		String flight_price = request.getParameter("price");
 
 		Flight rb = new Flight();
 
 		rb.setFlight_no(flight_no);
-		rb.setFlight_origin(From);
-		rb.setFlight_destination(To);
-		rb.setFlight_departure(depart);
-		rb.setFlight_arrival(arrive);
-		rb.setFlight_date(Date);
-		rb.setFlight_price(Price);
+		rb.setFlight_origin(flight_origin);
+		rb.setFlight_destination(flight_destination);
+		rb.setFlight_departure(flight_departure);
+		rb.setFlight_return(flight_return);
+		rb.setFlight_time(flight_time);
+		rb.setFlight_price(flight_price);
 
 		FlightDB ud = new FlightDB();
 		String s1 = ud.insertUser(rb);
 
 		System.out.println(s1);
 		out.println(flight_no);
-		out.println(From);
-		out.println(To);
-		out.println(depart);
-		out.println(arrive);
-		out.println(Date);
-		out.println(Price);
+		out.println(flight_origin);
+		out.println(flight_destination);
+		out.println(flight_departure);
+		out.println(flight_return);
+		out.println(flight_time);
+		out.println(flight_price);
 	}
 }

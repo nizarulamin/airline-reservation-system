@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import com.AirlineReservationSystem.beans.Flight;
+import com.IAANZAirline.Beans.Flight;
 
 public class FlightDB {
 	String s1 = null;
@@ -16,10 +16,10 @@ public class FlightDB {
 		try {
 			Statement stat = con.createStatement();
 			stat.executeUpdate(
-					"insert into flight(flight_ no, flight_ origin,flight_ destination,flight_departure,flight_ arrival,flight_ date,flight_ price) values('"
+					"insert into flight(flight_no,flight_origin,flight_destination,flight_departure,flight_return,flight_time,flight_price) values('"
 							+ rb.getFlight_no() + "','" + rb.getFlight_origin() + "','" + rb.getFlight_destination()
-							+ "','" + rb.getFlight_departure() + "','" + rb.getFlight_arrival() + "','" + "','"
-							+ rb.getFlight_date() + "','" + rb.getFlight_price() + "')");
+							+ "','" + rb.getFlight_departure() + "','" + rb.getFlight_return() + "','"
+							+ rb.getFlight_time() + "','" + rb.getFlight_price() + "')");
 			s1 = "Data Insert Successfully";
 		} catch (SQLException ex) {
 			ex.printStackTrace();
@@ -27,17 +27,17 @@ public class FlightDB {
 		return s1;
 	}
 
-	public String readData(Flight flight) {
+	public String viewData(Flight flight) {
 		MyDatabase db = new MyDatabase();
 		Connection con = db.getCon();
 		ResultSet rs;
 		try {
 			Statement stat = con.createStatement();
 			rs = stat.executeQuery(
-					"select flight_ no, flight_ origin,flight_ destination,flight_departure,flight_ arrival,flight_ date,flight_ price from flight'"
+					"select flight_no, flight_origin, flight_destination, flight_departure,flight_return, flight_time, flight_price from flight'"
 							+ flight.getFlight_no() + "','" + flight.getFlight_origin() + "','"
 							+ flight.getFlight_destination() + "','" + flight.getFlight_departure() + "','"
-							+ flight.getFlight_arrival() + "','" + "','" + flight.getFlight_date() + "','"
+							+ flight.getFlight_return() + "','" + "','" + flight.getFlight_time() + "','"
 							+ flight.getFlight_price() + "')");
 			rs.next();
 		} catch (SQLException ex) {
@@ -46,6 +46,7 @@ public class FlightDB {
 
 		return "success";
 	}
+
 	public String updData(Flight updData) {
 		MyDatabase db = new MyDatabase();
 		Connection con = db.getCon();
