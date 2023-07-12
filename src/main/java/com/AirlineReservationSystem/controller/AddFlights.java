@@ -12,15 +12,15 @@ import com.AirlineReservationSystem.beans.Flight;
 import com.AirlineReservationSystem.model.FlightDB;
 
 /**
- * Servlet implementation class AddFlighter
+ * Servlet implementation class AddFlights
  */
-public class AddFlighter extends HttpServlet {
+public class AddFlights extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public AddFlighter() {
+	public AddFlights() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -73,5 +73,12 @@ public class AddFlighter extends HttpServlet {
 		out.println(flight_return);
 		out.println(flight_time);
 		out.println(flight_price);
+
+		if (s1.equalsIgnoreCase("Data Insert Successfully")) {
+			response.sendRedirect("http://localhost:8080/IANNZProjectAirlines/admin-flight-info.jsp");
+		} else {
+			out.println("Invalid Info!");
+		}
 	}
+
 }
