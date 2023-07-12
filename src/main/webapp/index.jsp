@@ -40,10 +40,9 @@
 
 
   <style>
-    /* body {
-      font-family: "Poppins";
-      font-size: 22px;
-    } */
+    body {
+       background-color: #cfebff;
+    } 
     .sticky {
         position: fixed;
         top: 0;
@@ -106,7 +105,10 @@
     .btn:focus {
       box-shadow: none;
       outline: none
+      
     }
+    
+   
   </style>
 </head>
 

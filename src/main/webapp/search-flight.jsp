@@ -8,7 +8,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: powderblue;
+      background-color: #cfebff;
     }
 
     .header h1 {

@@ -96,6 +96,8 @@ button:hover.cancel {
 body, ul {
 	margin: 0;
 	padding: 0;
+	background-color: #cfebff;
+	
 }
 
 .wrapper {
@@ -208,7 +210,7 @@ nav ul li a:hover:before {
 }
 
 form {
-	background-color: #cfebff;
+	background-color: white;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	padding: 15px;
 	flex-grow: 1;
@@ -239,6 +241,7 @@ h1 {
 </style>
 
 <body>
+
 	<nav>
 		<ul>
       <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> 
@@ -251,30 +254,20 @@ h1 {
     </ul>
 	</nav>
 	<div class="wrapper">
-		<div class="sidebar">
-			<label for="sidebar-toggle" class="toggle-btn">&#9776;</label>
-			<ul>
-				<li>
-					<h3>Admin</h3>
-				</li>
-				<li><a href="index.jsp">Home</a></li>
-				<li><a href="passenger-details.jsp">Passenger Details</a></li>
-				<li><a href="edit-flight.jsp">Modify Flight</a></li>
-			</ul>
-		</div>
+
 		<div class="content content-height">
 			<center>
 				<h1>Edit Flight</h1>
 			</center>
 			<form action="../EditFlight" method="post">
 				<div class="elem-group">
-					<label for="flightNo">Flight No</label> <input type="text"
+					<b><label for="flightNo">Flight No</label></b> <input type="text"
 						id="flightNo" name="flight_no" placeholder="Flight No" required>
 				</div>
 
 				<hr>
 				<div class="elem-group inlined">
-					<label for="From">From</label> <select id="From" name="From"
+					<b><i class="fas fa-plane-departure"></i>From<label for="From"></label></b><select id="From" name="From"
 						required> 
 						<option value="">Origin</option>
 						<option value="AOR">Alor Star AOR</option>
@@ -292,7 +285,7 @@ h1 {
 						</select>
 				</div>
 				<div class="elem-group inlined">
-					<label for="To">To</label> <select id="To" name="To" required>
+					<b><i class="fas fa-plane-arrival"></i>To<label for="To"></label></b> <select id="To" name="To" required>
 					<option value="">Destination</option>
 						<option value="AOR">Alor Star AOR</option>
 						<option value="IPH">Ipoh IPH</option>
@@ -309,20 +302,20 @@ h1 {
 					</select>
 				</div>
 				<div class="elem-group inlined">
-					<label for="departure">Departure Date</label> <input type="date"
+					<b><i class="fas fa-clock"></i>Departure Date<label for="departure"></label></b> <input type="date"
 						id="depart" name="depart" required>
 				</div>
 				<div class="elem-group inlined">
-					<label for="return">Return Date</label> <input type="date"
+					<b><i class="fas fa-clock"></i>Return Date<label for="return"></label></b> <input type="date"
 						id="return" name="return" required>
 				</div>
 
 				<div class="elem-group ">
-					<label for="time">Time</label> <input type="time" id="time"
+					<b><i class="fas fa-clock"></i>Time<label for="time"></label></b> <input type="time" id="time"
 						name="time" placeholder="Time" required>
 				</div>
 				<div class="elem-group ">
-					<label for="price">Price</label> <input type="number" id="price"
+					<b><label for="price">Price</label></b> <input type="number" id="price"
 						name="price" placeholder="Price" required>
 				</div>
 			<center>
@@ -333,6 +326,11 @@ h1 {
 			
 		</div>
 	</div>
+	 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </body>
 
 </html>

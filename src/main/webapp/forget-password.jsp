@@ -14,9 +14,9 @@
       a {
         text-decoration: none;
       }
-
-      .forget-password-section {
-        background-color: #f3f5f9;
+           
+     .forget-password-section {
+        background-color: #cfebff;
         height: 655px;
       }
 
@@ -73,6 +73,18 @@
     </style>
   </head>
   <body>
+  
+    <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid"><img src="https://i.imgur.com/hSDDP67.png" height="50px" width="50px" /> <a
+        class="navbar-brand name" href="index.jsp">IAANZ<span class="airline">Airlines</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="navbar-toggler-icon"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      </div>
+    </div>
+  </nav>
+  
     <!-- login start -->
     <section class="forget-password-section pt">
         <div class="container">
