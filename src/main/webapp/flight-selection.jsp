@@ -122,34 +122,46 @@
   <div class="container">
     <h1 class="heading">Flight Selection</h1>
     <ul class="flight-list">
-      <li class="flight-item">
+      <li class="flight-item" onclick="selectFlight(1)">
         <h2>Flight 1</h2>
-        <p>Origin: Penang</p>
-        <p>Destination: Langkawi</p>
-        <p>Departure Time: 10:00 AM</p>
-        <p>Arrival Time: 12:00 PM</p>
+        <p><i class="fas fa-plane-departure"></i>Origin: Penang</p>
+        <p><i class="fas fa-plane-arrival"></i>Destination: Langkawi</p>
+        <p><i class="fas fa-clock"></i>Departure Time: 10:00 AM</p>
+        <p><i class="fas fa-clock"></i>Arrival Time: 12:00 PM</p>
       </li>
-      <li class="flight-item">
+      <li class="flight-item" onclick="selectFlight(2)">
         <h2>Flight 2</h2>
-        <p>Origin: Perthlis</p>
-        <p>Destination: London</p>
-        <p>Departure Time: 1:00 PM</p>
-        <p>Arrival Time: 3:00 PM</p>
+        <p><i class="fas fa-plane-departure"></i>Origin: Perthlis</p>
+        <p><i class="fas fa-plane-arrival"></i>Destination: London</p>
+        <p><i class="fas fa-clock"></i>Departure Time: 1:00 PM</p>
+        <p><i class="fas fa-clock"></i>Arrival Time: 3:00 PM</p>
       </li>
-      <li class="flight-item">
+      <li class="flight-item" onclick="selectFlight(3)">
         <h2>Flight 3</h2>
-        <p>Origin: Newcastle</p>
-        <p>Destination: Aloq Staq</p>
-        <p>Departure Time: 4:00 PM</p>
-        <p>Arrival Time: 6:00 PM</p>
+        <p><i class="fas fa-plane-departure"></i>Origin: Newcastle</p>
+        <p><i class="fas fa-plane-arrival"></i>Destination: Aloq Staq</p>
+        <p><i class="fas fa-clock"></i>Departure Time: 4:00 PM</p>
+        <p><i class="fas fa-clock"></i>Arrival Time: 6:00 PM</p>
       </li>
     </ul>
-    <a class="continue-btn" href="#">Continue</a>
+    <a class="continue-btn" href="#"><i class="fas fa-arrow-right"></i> Continue</a>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    
+    <script>
+    // JavaScript function to handle flight selection
+    function selectFlight(flightId) {
+      // Store selected flight ID in local storage
+      localStorage.setItem('selectedFlight', flightId);
+
+      // Redirect to seat selection page
+      window.location.href = 'add-flight.jsp';
+    }
+  </script>
 
 </body>
 </html>

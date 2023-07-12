@@ -1,0 +1,78 @@
+package com.AirlineReservationSystem.controller;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.AirlineReservationSystem.beans.Flight;
+import com.AirlineReservationSystem.model.FlightDB;
+
+/**
+ * Servlet implementation class EditFlight
+ */
+public class EditFlight extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public EditFlight() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+		PrintWriter out = response.getWriter();
+
+		String flight_no = request.getParameter("flight_no");
+		String flight_origin = request.getParameter("From");
+		String flight_destination = request.getParameter("To");
+		String flight_departure = request.getParameter("depart");
+		String flight_return = request.getParameter("return");
+		String flight_time = request.getParameter("time");
+		double flight_price = Double.parseDouble(request.getParameter("price"));
+
+		Flight rb = new Flight();
+
+		rb.setFlight_no(flight_no);
+		rb.setFlight_origin(flight_origin);
+		rb.setFlight_destination(flight_destination);
+		rb.setFlight_departure(flight_departure);
+		rb.setFlight_return(flight_return);
+		rb.setFlight_time(flight_time);
+		rb.setPrice(flight_price);
+
+		FlightDB ud = new FlightDB();
+		String s1 = ud.updateFlight(rb);
+
+		System.out.println(s1);
+
+		if (s1.equalsIgnoreCase("Data Update Successfully")) {
+			response.sendRedirect("http://localhost:8080/IANNZProjectAirlines/admin-flight-info.jsp");
+		} else {
+			out.println("Invalid Info!");
+		}
+	}
+
+}

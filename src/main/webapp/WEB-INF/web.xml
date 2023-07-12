@@ -17,6 +17,36 @@
   	<servlet-class>com.AirlineReservationSystem.controller.Registration</servlet-class>
   </servlet>
   <servlet>
+  	<servlet-name>Regsitration</servlet-name>
+  	<display-name>Regsitration</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.Regsitration</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>flight</servlet-name>
+  	<display-name>flight</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.flight</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddFlight</servlet-name>
+  	<display-name>AddFlight</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.AddFlight</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>EditFlight</servlet-name>
+  	<display-name>EditFlight</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.EditFlight</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AddFlights</servlet-name>
+  	<display-name>AddFlights</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.AddFlights</servlet-class>
+  </servlet>
+  <servlet-mapping>
   	<servlet-name>Register</servlet-name>
   	<display-name>Register</display-name>
   	<description></description>
@@ -34,5 +64,20 @@
   	<servlet-name>Register</servlet-name>
   	<url-pattern>/Register</url-pattern>
   </servlet-mapping>
-
+  <servlet-mapping>
+  	<servlet-name>flight</servlet-name>
+  	<url-pattern>/flight</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddFlight</servlet-name>
+  	<url-pattern>/AddFlight</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>EditFlight</servlet-name>
+  	<url-pattern>/EditFlight</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AddFlights</servlet-name>
+  	<url-pattern>/AddFlights</url-pattern>
+  </servlet-mapping>
 </web-app>

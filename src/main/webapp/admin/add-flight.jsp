@@ -271,7 +271,7 @@
       <center>
         <h1>Add New Flight</h1>
       </center>
-      <form action="reservation.php" method="post">
+      <form action="../AddFlights" method="post">
         <div class="elem-group">
           <label for="flightNo">Flight No</label>
           <input type="text" id="flightNo" name="flight_no" placeholder="Flight No" required>
@@ -282,43 +282,62 @@
           <label for="From">From</label>
           <select id="From" name="From" required>
             <option value="">Origin</option>
-            <option value="Penang">Penang</option>
-            <option value="Perlis">Perlis</option>
-            <option value="Kedah">Kedah</option>
+						<option value="AOR">Alor Star AOR</option>
+						<option value="IPH">Ipoh IPH</option>
+						<option value="JHB">Johor Bahru JHB</option>
+						<option value="BKI">Kota Kinabalu BKI</option>
+						<option value="KBR">Kota Bharu KBR</option>
+						<option value="KUL">Kuala Lumpur KUL</option>
+						<option value="KCH">Kuching KCH</option>
+						<option value="LGK">Langkawi LGK</option>
+						<option value="PEN">Penang PEN</option>
+						<option value="PLS">Perlis PLS</option>
+						<option value="SZB">Subang SZB</option>
+						<option value="TGG">Terengganu TGG</option>
           </select>
         </div>
         <div class="elem-group inlined">
           <label for="From">To</label>
-          <select id="From" name="From" required>
-            <option value="">Destination</option>
-            <option value="Penang">Penang</option>
-            <option value="Perlis">Perlis</option>
-            <option value="Kedah">Kedah</option>
+          <select id="From" name="To" required>
+            <option value="">Origin</option>
+						<option value="AOR">Alor Star AOR</option>
+						<option value="IPH">Ipoh IPH</option>
+						<option value="JHB">Johor Bahru JHB</option>
+						<option value="BKI">Kota Kinabalu BKI</option>
+						<option value="KBR">Kota Bharu KBR</option>
+						<option value="KUL">Kuala Lumpur KUL</option>
+						<option value="KCH">Kuching KCH</option>
+						<option value="LGK">Langkawi LGK</option>
+						<option value="PEN">Penang PEN</option>
+						<option value="PLS">Perlis PLS</option>
+						<option value="SZB">Subang SZB</option>
+						<option value="TGG">Terengganu TGG</option>
           </select>
         </div>
         <div class="elem-group inlined">
-          <label for="departure">Departure</label>
-          <input type="time" id="departure" name="depart" required>
-        </div>
-        <div class="elem-group inlined">
-          <label for="arrival">Arrival</label>
-          <input type="time" id="arrival" name="arrive" required>
-        </div>
+					<label for="departure">Departure Date</label> <input type="date"
+						id="depart" name="depart" required>
+				</div>
+				<div class="elem-group inlined">
+					<label for="arrival">Return Date</label> <input type="date"
+						id="return" name="return" required>
+				</div>
 
-        <div class="elem-group ">
-          <label for="date">Date</label>
-          <input type="date" id="date" name="date" placeholder="Date" required>
-        </div>
-        <div class="elem-group ">
-          <label for="price">Price</label>
-          <input type="number" id="price" name="price" placeholder="Price" required>
-        </div>
-
-      </form>
-      <center>
-        <button type="submit">Add New Flight</button>
+				<div class="elem-group ">
+					<label for="Time">Time</label> <input type="Time" id="date"
+						name="time" placeholder="Time" required>
+				</div>
+				<div class="elem-group ">
+					<label for="price">Price</label> <input type="number" id="price"
+						name="price" placeholder="Price" required>
+				</div>
+         <center>
+        <button type="submit" value="AddFlighter">Add New Flight</button>
         <button class="cancel" type="reset">Cancel</button>
       </center>
+
+      </form>
+     
     </div>
   </div>
 </body>

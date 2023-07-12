@@ -8,19 +8,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.AirlineReservationSystem.beans.User;
-import com.AirlineReservationSystem.model.UserDB;
+import com.AirlineReservationSystem.beans.Admin;
+import com.AirlineReservationSystem.model.AdminDB;
+
 
 /**
- * Servlet implementation class Register
+ * Servlet implementation class Login
  */
-public class Registration extends HttpServlet {
+public class LoginAdmin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public Registration() {
+	public LoginAdmin() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -33,6 +34,23 @@ public class Registration extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		PrintWriter out = response.getWriter();
+		String email = request.getParameter("email");
+		String password = request.getParameter("password");
+
+		Admin admin = new Admin();
+		admin.setEmail(email);
+		admin.setPassword(password);
+
+		AdminDB ud = new AdminDB();
+		String s1 = ud.readData(admin);
+
+		if (s1.equalsIgnoreCase("success")) {
+			response.sendRedirect("http://localhost:8080/AirlineReservationSystem/index.jsp");
+		} else {
+			out.println("Invalid Email or Password");
+		}
+
 	}
 
 	/**
@@ -43,32 +61,6 @@ public class Registration extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-		PrintWriter out = response.getWriter();
-		String firstName = request.getParameter("fName");
-		String lastName = request.getParameter("lName");
-		String phone = request.getParameter("phone");
-		String email = request.getParameter("email");
-		String password = request.getParameter("psw");
-
-		User rb = new User();
-
-		rb.setFirstName(firstName);
-		rb.setLastName(lastName);
-		rb.setPhone(phone);
-		rb.setEmail(email);
-		rb.setPassword(password);
-
-		UserDB ud = new UserDB();
-		String s1 = ud.insertUser(rb);
-
-		System.out.println(s1);
-
-		if (s1.equalsIgnoreCase("Data Insert Successfully")) {
-			response.sendRedirect("http://localhost:8080/AirlineReservationSystem/index.jsp");
-		} else {
-			out.println("Invalid Email or Password");
-		}
-
 	}
 
 }

@@ -39,22 +39,22 @@ public class Login extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		PrintWriter out = response.getWriter();
-		String email = request.getParameter("email");
-		String password = request.getParameter("password");
-
-		User user = new User();
-		user.setEmail(email);
-		user.setPassword(password);
-
-		UserDB ud = new UserDB();
-		String s1 = ud.readData(user);
-
-		if (s1.equalsIgnoreCase("success")) {
-			response.sendRedirect("http://localhost:8080/AirlineReservationSystem/index.jsp");
-		} else {
-			out.println("Invalid Email or Password");
-		}
+//		PrintWriter out = response.getWriter();
+//		String email = request.getParameter("email");
+//		String password = request.getParameter("password");
+//
+//		User user = new User();
+//		user.setEmail(email);
+//		user.setPassword(password);
+//
+//		UserDB ud = new UserDB();
+//		String s1 = ud.readData(user);
+//
+//		if (s1.equalsIgnoreCase("success")) {
+//			response.sendRedirect("http://localhost:8080/AirlineReservationSystem/index.jsp");
+//		} else {
+//			out.println("Invalid Email or Password");
+//		}
 
 	}
 
