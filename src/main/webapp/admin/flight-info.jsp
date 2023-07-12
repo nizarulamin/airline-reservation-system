@@ -393,7 +393,7 @@
 						    	//Retrieve data from database
 						    	Class.forName("com.mysql.jdbc.Driver");
 								//Database punya link, username, password
-								Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "January_97");
+								Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectairlines", "root", "Bbjkchm@1512");
 								//above statement ,ydb exist mysql
 								Statement st = con.createStatement();
 								//display all
@@ -402,7 +402,7 @@
 								while(rs.next()){
 						%>
                           <tr>
-                            <td><%=rs.getInt("idflight") %></td>
+                            <td><%=rs.getInt("flightId") %></td>
                             <td><%=rs.getString("flight_no") %></td>
                             <td><%=rs.getString("flight_origin") %></td>
                             <td><%=rs.getString("flight_destination") %></td>
@@ -410,7 +410,7 @@
                             <td><%=rs.getString("flight_return") %></td>
                             <td><%=rs.getString("flight_time") %></td>  
                             <td><%=rs.getString("flight_price") %></td>                    
-                            <td><a href="admin-edit-flight.jsp?id=<%=rs.getInt("idflight") %>"><button class="badge bg-red" >EDIT</button></a></td>
+                            <td><a href="admin-edit-flight.jsp?id=<%=rs.getInt("flightId") %>"><button class="badge bg-red" >EDIT</button></a></td>
                           </tr>
                          
 <% }// while loop complete

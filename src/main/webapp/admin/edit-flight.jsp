@@ -311,8 +311,8 @@
                     <input type="time" id="departure" name="depart" required>
                   </div>
                   <div class="elem-group inlined">
-                    <label for="arrival">Arrival</label>
-                    <input type="time" id="arrival" name="arrive" required>
+                    <label for="arrival">Return</label>
+                    <input type="time" id="arrival" name="return" required>
                   </div>
 
                   <div class="elem-group ">
