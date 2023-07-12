@@ -64,7 +64,7 @@ public class Registration extends HttpServlet {
 		System.out.println(s1);
 
 		if (s1.equalsIgnoreCase("Data Insert Successfully")) {
-			response.sendRedirect("http://localhost:8080/AirlineReservationSystem/login.jsp");
+			response.sendRedirect("http://localhost:8080/AirlineReservationSystem/index.jsp");
 		} else {
 			out.println("Invalid Email or Password");
 		}
