@@ -5,6 +5,7 @@
     
     
     <wb-module deploy-name="AirlineReservationSystem">
+<<<<<<< HEAD
                                         
         
         
@@ -16,9 +17,10 @@
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
                 
+=======
+>>>>>>> a55e21f4d86ff9c3bf6e4b2e601f434356a8027f
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
                                                 
         
         

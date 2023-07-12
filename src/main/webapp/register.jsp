@@ -14,7 +14,7 @@ body {
 
 .container {
   max-width: 400px;
-  margin: 0 auto;
+  margin: 80px auto; /* Adjust the top margin to provide space for the navbar */
   padding: 40px;
   background-color: #fff;
   border-radius: 8px;
@@ -111,6 +111,7 @@ function wrong_pass_alert() {
 }
 </script>  
 <body>
+    <jsp:include page="navbar.jsp" />
 <div class="container">
   <h1>Register</h1>
   <p>Please fill in this form to create an account.</p>
@@ -122,7 +123,7 @@ function wrong_pass_alert() {
     <input type="password" placeholder="Enter Password" name="psw" id="psw"  required>
     <input type="password" placeholder="Confirm Password" name="psw-confirm" id="psw-repeat"  required onkeyup="validate_password()">
     <span id="wrong_pass_alert" ></span>
-    <button type="submit" id="register" class="registerbtn" onclick="wrong_pass_alert()">Register</button>
+    <button type="submit" value="Register" id="register" class="registerbtn">Register</button>
   </form>
   <div class="signin">
     <p>Already have an account? <a href="login.jsp">Sign in</a>.</p>

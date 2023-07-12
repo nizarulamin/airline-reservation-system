@@ -46,7 +46,7 @@ public class LoginAdmin extends HttpServlet {
 		String s1 = ud.readData(admin);
 
 		if (s1.equalsIgnoreCase("success")) {
-			response.sendRedirect("http://localhost:8080/AirlineReservationSystem/index.jsp");
+			response.sendRedirect("http://localhost:8080/AirlineReservationSystem/admin/index.jsp");
 		} else {
 			out.println("Invalid Email or Password");
 		}

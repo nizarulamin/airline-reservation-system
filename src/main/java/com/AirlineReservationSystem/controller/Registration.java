@@ -44,16 +44,16 @@ public class Registration extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		PrintWriter out = response.getWriter();
-		String fName = request.getParameter("fName");
-		String lName = request.getParameter("lName");
+		String firstName = request.getParameter("fName");
+		String lastName = request.getParameter("lName");
 		String phone = request.getParameter("phone");
 		String email = request.getParameter("email");
 		String password = request.getParameter("psw");
 
 		User rb = new User();
 
-		rb.setfName(fName);
-		rb.setlName(lName);
+		rb.setFirstName(firstName);
+		rb.setLastName(lastName);
 		rb.setPhone(phone);
 		rb.setEmail(email);
 		rb.setPassword(password);

@@ -8,6 +8,8 @@
       font-size: 1.6rem;
       font-family: "Open Sans", sans-serif;
       color: #2b3e51;
+            padding-top: 80px; /* Add padding to the top to accommodate the navbar */
+      
     }
 
     h2 {
@@ -182,6 +184,7 @@
 </head>
 
 <body>
+<jsp:include page="navbar-after.jsp" /> 
   <!-- partial:index.partial.html -->
   <div id="login-form-wrap">
     <h3>Login</h3>
