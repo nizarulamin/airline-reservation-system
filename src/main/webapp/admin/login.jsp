@@ -185,7 +185,7 @@
   <!-- partial:index.partial.html -->
   <div id="login-form-wrap">
     <h3>Login</h3>
-    <form id="login-form" method="post" action="/AirlineReservationSystem/src/main/java/com/AirlineReservationSystem/controller/LoginAdmin.java">
+    <form id="login-form" method="post" action="../LoginAdmin">
       <p>
         <input type="text" style="font-size:13px;" id="username" name="email" placeholder="Email" required><i
           class="validation"><span></span><span></span></i>
