@@ -148,10 +148,36 @@
     <h2 class="heading">Flight Search</h2>
     <form action="flight-selection.jsp" method="get">
       <label for="from">From:</label>
-      <input type="text" id="from" name="from" placeholder="Departure city" required>
+      <select type="text" id="from" name="from" placeholder="Departure city" required>
+      <option value="">Origin</option>
+						<option value="AOR">Alor Star AOR</option>
+						<option value="IPH">Ipoh IPH</option>
+						<option value="JHB">Johor Bahru JHB</option>
+						<option value="BKI">Kota Kinabalu BKI</option>
+						<option value="KBR">Kota Bharu KBR</option>
+						<option value="KUL">Kuala Lumpur KUL</option>
+						<option value="KCH">Kuching KCH</option>
+						<option value="LGK">Langkawi LGK</option>
+						<option value="PEN">Penang PEN</option>
+						<option value="PLS">Perlis PLS</option>
+						<option value="SZB">Subang SZB</option>
+						<option value="TGG">Terengganu TGG</option></select>
 
       <label for="to">To:</label>
-      <input type="text" id="to" name="to" placeholder="Destination city" required>
+      <select type="text" id="to" name="to" placeholder="Destination city" required>
+      <option value="">Destination</option>
+						<option value="AOR">Alor Star AOR</option>
+						<option value="IPH">Ipoh IPH</option>
+						<option value="JHB">Johor Bahru JHB</option>
+						<option value="BKI">Kota Kinabalu BKI</option>
+						<option value="KBR">Kota Bharu KBR</option>
+						<option value="KUL">Kuala Lumpur KUL</option>
+						<option value="KCH">Kuching KCH</option>
+						<option value="LGK">Langkawi LGK</option>
+						<option value="PEN">Penang PEN</option>
+						<option value="PLS">Perlis PLS</option>
+						<option value="SZB">Subang SZB</option>
+						<option value="TGG">Terengganu TGG</option></select>
 
       <label for="departure-date">Departure Date:</label>
       <input type="date" id="departure-date" name="departure-date" required>

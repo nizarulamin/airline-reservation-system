@@ -5,12 +5,6 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
-  	<servlet-name>Register</servlet-name>
-  	<display-name>Register</display-name>
-  	<description></description>
-  	<servlet-class>com.AirlineReservationSystem.controller.Register</servlet-class>
-  </servlet>
-  <servlet>
   	<servlet-name>Login</servlet-name>
   	<display-name>Login</display-name>
   	<description></description>
@@ -52,10 +46,18 @@
   	<description></description>
   	<servlet-class>com.AirlineReservationSystem.controller.AddFlights</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ResetPassword</servlet-name>
+  	<display-name>ResetPassword</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.ResetPassword</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Register</servlet-name>
-  	<url-pattern>/Register</url-pattern>
-  </servlet-mapping>
+  	<display-name>Register</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.Register</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
@@ -83,5 +85,9 @@
   <servlet-mapping>
   	<servlet-name>AddFlights</servlet-name>
   	<url-pattern>/AddFlights</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ResetPassword</servlet-name>
+  	<url-pattern>/ResetPassword</url-pattern>
   </servlet-mapping>
 </web-app>

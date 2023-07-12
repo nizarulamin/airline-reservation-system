@@ -100,44 +100,33 @@
   }
 </style>
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky">
-  <div class="container-fluid">
-    <img src="./images/logo.png" height="50px" width="50px" />
-    <a class="navbar-brand name" href="index.jsp"
-      >IAANZ<span class="airline">Airlines</span></a
-    >
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.jsp"
-            ><span class="highlight">Home</span></a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="search-flight.jsp">Flight</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="booking-history.jsp">Booking</a>
-        </li>
-      </ul>
+    <div class="container-fluid">
+      <img src="./images/logo.png" height="50px" width="50px" />
+      <a class="navbar-brand name" href="index.jsp">IAANZ<span class="airline">Airlines</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.jsp"><span class="highlight">Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="search-flight.jsp">Flight</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ml-auto">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="login.jsp" style="color: #7f858a;">Login</a>
+          </li>
+          <li class="nav-item">
+            <div class="btn btn-dark"><a href="register.jsp" style="color: #ffffff; font-size: 14px;">Register</a></div>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="nav-item">
-      <a class="nav-link" href="login.jsp" style="color: #7f858a">Login</a>
-    </div>
-    <div class="btn btn-dark">
-      <a href="register.jsp" style="color: #ffffff; font-size: 14px"
-        >Register
-      </a>
-    </div>
-  </div>
-</nav>
+  </nav>
+  

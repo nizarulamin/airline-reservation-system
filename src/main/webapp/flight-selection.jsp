@@ -1,4 +1,7 @@
-
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import = "java.sql.DriverManager" %>
 <!DOCTYPE html>
 
 <html>
@@ -119,17 +122,36 @@
       
     </div>
   </nav>
+   
   <div class="container">
-    <h1 class="heading">Flight Selection</h1>
-    <ul class="flight-list">
-      <li class="flight-item" onclick="selectFlight(1)">
-        <h2>Flight 1</h2>
-        <p><i class="fas fa-plane-departure"></i>Origin: Penang</p>
-        <p><i class="fas fa-plane-arrival"></i>Destination: Langkawi</p>
-        <p><i class="fas fa-clock"></i>Departure Time: 10:00 AM</p>
-        <p><i class="fas fa-clock"></i>Arrival Time: 12:00 PM</p>
-      </li>
-      <li class="flight-item" onclick="selectFlight(2)">
+   <h1 class="heading">Flight Selection</h1>
+  <% 
+						    try {
+						    	//Retrieve data from database
+						    	Class.forName("com.mysql.jdbc.Driver");
+								//Database punya link, username, password
+								Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "January_97");
+								//above statement ,ydb exist mysql
+								Statement st = con.createStatement();
+								//display all
+								String str = "select * from flight";
+								ResultSet rs = st.executeQuery(str);
+								while(rs.next()){
+						%>
+			    <ul class="flight-list">
+			   
+			      <li class="flight-item">
+			        <h2>Flight <%=rs.getInt("idflight") %></h2>
+			        <p>Origin: <%=rs.getString("flight_origin") %></p>
+			        <p>Destination: <%=rs.getString("flight_destination") %></p>
+			        <p>Departure Date: <%=rs.getString("flight_departure") %></p>
+			        <p>Arrival Time: <%=rs.getString("flight_time") %></p>
+			      </li>
+			       <% } // while loop complete 
+			                }
+			              catch(Exception e){ } 
+			              %>
+      <!-- <li class="flight-item">
         <h2>Flight 2</h2>
         <p><i class="fas fa-plane-departure"></i>Origin: Perthlis</p>
         <p><i class="fas fa-plane-arrival"></i>Destination: London</p>
@@ -138,13 +160,13 @@
       </li>
       <li class="flight-item" onclick="selectFlight(3)">
         <h2>Flight 3</h2>
-        <p><i class="fas fa-plane-departure"></i>Origin: Newcastle</p>
-        <p><i class="fas fa-plane-arrival"></i>Destination: Aloq Staq</p>
-        <p><i class="fas fa-clock"></i>Departure Time: 4:00 PM</p>
-        <p><i class="fas fa-clock"></i>Arrival Time: 6:00 PM</p>
+        <p>Origin: Newcastle</p>
+        <p>Destination: Aloq Staq</p>
+        <p>Departure Time: 4:00 PM</p>
+        <p>Arrival Time: 6:00 PM</p>
       </li>
-    </ul>
-    <a class="continue-btn" href="#"><i class="fas fa-arrow-right"></i> Continue</a>
+    </ul> -->
+    <a class="continue-btn" href="#">Continue</a>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>

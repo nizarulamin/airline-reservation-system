@@ -94,9 +94,10 @@
                         <i class="fa-solid fa-key"></i>
                         <h1>Forget Password ?</h1>
                         <p>No worry's we will send you reset instruction</p>
-                        <form>
+                        <form action="ResetPassword" method="post">
                             <div class="mb-3">
-                              <input type="email" class="form-control" id="" placeholder="Email Address" required>
+                              <input type="email" class="form-control" name="email" placeholder="Email Address" required>
+                              <input type="password" class="form-control" name="password" placeholder="New Password" required>
                             </div>
                             <button type="submit" class="btn">Reset Password</button>
                           </form>   

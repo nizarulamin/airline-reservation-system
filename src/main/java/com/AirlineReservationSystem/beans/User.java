@@ -1,26 +1,26 @@
 package com.AirlineReservationSystem.beans;
 
 public class User {
-	private String fName;
-	private String lName;
+	private String firstName;
+	private String lastName;
 	private String phone;
 	private String email;
 	private String password;
 
-	public String getfName() {
-		return fName;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setfName(String fName) {
-		this.fName = fName;
+	public void setFirstName(String fName) {
+		this.firstName = fName;
 	}
 
-	public String getlName() {
-		return lName;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setlName(String lName) {
-		this.lName = lName;
+	public void setLastName(String lName) {
+		this.lastName = lName;
 	}
 
 	public String getPhone() {

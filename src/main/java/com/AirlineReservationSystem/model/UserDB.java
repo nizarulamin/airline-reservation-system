@@ -15,8 +15,9 @@ public class UserDB {
 		Connection con = db.getCon();
 		try {
 			Statement stat = con.createStatement();
-			stat.executeUpdate("insert into user(fName,lName,phone,email,password) values('" + rb.getfName() + "','"
-					+ rb.getlName() + "','" + rb.getPhone() + "','" + rb.getEmail() + "','" + rb.getPassword() + "')");
+			stat.executeUpdate("insert into user(first_name,last_name,phone,email,password) values('"
+					+ rb.getFirstName() + "','" + rb.getLastName() + "','" + rb.getPhone() + "','" + rb.getEmail()
+					+ "','" + rb.getPassword() + "')");
 			s1 = "Data Insert Successfully";
 		} catch (SQLException ex) {
 			ex.printStackTrace();
