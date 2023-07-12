@@ -17,10 +17,10 @@
   	<servlet-class>com.AirlineReservationSystem.controller.Registration</servlet-class>
   </servlet>
   <servlet>
-  	<servlet-name>Regsitration</servlet-name>
-  	<display-name>Regsitration</display-name>
+  	<servlet-name>LoginAdmin</servlet-name>
+  	<display-name>/LoginAdmin</display-name>
   	<description></description>
-  	<servlet-class>com.AirlineReservationSystem.controller.Regsitration</servlet-class>
+  	<servlet-class>com.AirlineReservationSystem.controller.LoginAdmin</servlet-class>
   </servlet>
   <servlet>
   	<servlet-name>flight</servlet-name>
@@ -46,6 +46,12 @@
   	<description></description>
   	<servlet-class>com.AirlineReservationSystem.controller.AddFlights</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ResetPassword</servlet-name>
+  	<display-name>ResetPassword</display-name>
+  	<description></description>
+  	<servlet-class>com.AirlineReservationSystem.controller.ResetPassword</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>Register</servlet-name>
   	<display-name>Register</display-name>
@@ -61,8 +67,8 @@
   	<url-pattern>/Registration</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-  	<servlet-name>Register</servlet-name>
-  	<url-pattern>/Register</url-pattern>
+  	<servlet-name>LoginAdmin</servlet-name>
+  	<url-pattern>/LoginAdmin</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>flight</servlet-name>
@@ -79,5 +85,9 @@
   <servlet-mapping>
   	<servlet-name>AddFlights</servlet-name>
   	<url-pattern>/AddFlights</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ResetPassword</servlet-name>
+  	<url-pattern>/ResetPassword</url-pattern>
   </servlet-mapping>
 </web-app>
