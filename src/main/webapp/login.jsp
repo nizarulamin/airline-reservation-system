@@ -184,7 +184,7 @@
 </head>
 
 <body>
-<jsp:include page="navbar-after.jsp" /> 
+<jsp:include page="navbar-before.jsp" /> 
   <!-- partial:index.partial.html -->
   <div id="login-form-wrap">
     <h3>Login</h3>

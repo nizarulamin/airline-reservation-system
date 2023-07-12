@@ -52,7 +52,7 @@
   	<description></description>
   	<servlet-class>com.AirlineReservationSystem.controller.ResetPassword</servlet-class>
   </servlet>
-  <servlet-mapping>
+  <servlet>
   	<servlet-name>Register</servlet-name>
   	<display-name>Register</display-name>
   	<description></description>
