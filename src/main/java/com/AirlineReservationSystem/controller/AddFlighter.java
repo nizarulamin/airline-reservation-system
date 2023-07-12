@@ -12,15 +12,15 @@ import com.AirlineReservationSystem.beans.Flight;
 import com.AirlineReservationSystem.model.FlightDB;
 
 /**
- * Servlet implementation class AddFlight
+ * Servlet implementation class AddFlighter
  */
-public class AddFlight extends HttpServlet {
+public class AddFlighter extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public AddFlight() {
+	public AddFlighter() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -42,7 +42,6 @@ public class AddFlight extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 		doGet(request, response);
 		PrintWriter out = response.getWriter();
 		String flight_no = request.getParameter("flight_no");

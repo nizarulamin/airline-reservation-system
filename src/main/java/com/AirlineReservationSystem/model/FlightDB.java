@@ -46,4 +46,21 @@ public class FlightDB {
 
 		return "success";
 	}
+	public String updData(Flight updData) {
+		MyDatabase db = new MyDatabase();
+		Connection con = db.getCon();
+		ResultSet rs;
+		try {
+			Statement stat = con.createStatement();
+			rs = stat.executeQuery(
+					"update flight set flight_departure=?, flight_return=?, flight_time=?, flight_price=? from flight where idflight = ?'"
+							+ updData.getFlight_return() + "','" + "','" + updData.getFlight_time() + "','"
+							+ updData.getFlight_price() + "')");
+			rs.next();
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		}
+
+		return "success";
+	}
 }

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import = "java.sql.DriverManager" %><!DOCTYPE html>
 <html>
 
 <head>
@@ -380,60 +383,42 @@
                             <th>From</th>
                             <th>To</th>
                             <th>Departure</th>
-                            <th>Arrival</th>
+                            <th>Return</th>
+                            <th>Time</th>
                             <th>Price</th>
                             <th>Edit Flight</th>
                           </tr>
+                          <% 
+						    try {
+						    	//Retrieve data from database
+						    	Class.forName("com.mysql.jdbc.Driver");
+								//Database punya link, username, password
+								Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "January_97");
+								//above statement ,ydb exist mysql
+								Statement st = con.createStatement();
+								//display all
+								String str = "select * from flight";
+								ResultSet rs = st.executeQuery(str);
+								while(rs.next()){
+						%>
                           <tr>
-                            <td>1</td>
-                            <td>IAN 220</td>
-                            <td>KUL</td>
-                            <td>AOR</td>
-                            <td>0800</td>
-                            <td>1304</td>
-                            <td>90.00</td>
-                            <td><span class="badge bg-red">55%</span></td>
+                            <td><%=rs.getInt("idflight") %></td>
+                            <td><%=rs.getString("flight_no") %></td>
+                            <td><%=rs.getString("flight_origin") %></td>
+                            <td><%=rs.getString("flight_destination") %></td>
+                            <td><%=rs.getString("flight_departure") %></td>
+                            <td><%=rs.getString("flight_return") %></td>
+                            <td><%=rs.getString("flight_time") %></td>  
+                            <td><%=rs.getString("flight_price") %></td>                    
+                            <td><a href="admin-edit-flight.jsp?id=<%=rs.getInt("idflight") %>"><button class="badge bg-red" >EDIT</button></a></td>
                           </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>IAN 220</td>
-                            <td>KUL</td>
-                            <td>AOR</td>
-                            <td>0800</td>
-                            <td>1304</td>
-                            <td>90.00</td>
-                            <td><span class="badge bg-red">55%</span></td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>IAN 220</td>
-                            <td>KUL</td>
-                            <td>AOR</td>
-                            <td>0800</td>
-                            <td>1304</td>
-                            <td>90.00</td>
-                            <td><span class="badge bg-red">55%</span></td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>IAN 220</td>
-                            <td>KUL</td>
-                            <td>AOR</td>
-                            <td>0800</td>
-                            <td>1304</td>
-                            <td>90.00</td>
-                            <td><span class="badge bg-red">55%</span></td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>IAN 220</td>
-                            <td>KUL</td>
-                            <td>AOR</td>
-                            <td>0800</td>
-                            <td>1304</td>
-                            <td>90.00</td>
-                            <td><span class="badge bg-red">55%</span></td>
-                          </tr>
+                         
+<% }// while loop complete
+		
+    }catch(Exception e){
+    	
+    }  
+%>
                         </tbody>
                       </table>
                     </div>

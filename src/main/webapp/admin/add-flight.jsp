@@ -271,7 +271,7 @@
       <center>
         <h1>Add New Flight</h1>
       </center>
-      <form action="../AddFlight" method="post">
+      <form action="../AddFlighter" method="post">
         <div class="elem-group">
           <label for="flightNo">Flight No</label>
           <input type="text" id="flightNo" name="flight_no" placeholder="Flight No" required>
