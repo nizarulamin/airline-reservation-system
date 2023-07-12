@@ -173,11 +173,19 @@
                 <th>Seat</th>
                 <th>Status</th>
               </tr>
-              <% try { //Retrieve data from database Class.forName("com.mysql.jdbc.Driver"); //Database punya link,
-                username, password Connection
-                con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root" , "January_97" ); //above
-                statement ,ydb exist mysql Statement st=con.createStatement(); //display all String
-                str="select * from booking" ; ResultSet rs=st.executeQuery(str); while(rs.next()){ %>
+              <% 
+              try { //Retrieve data from database 
+              Class.forName("com.mysql.jdbc.Driver"); 
+              //Database punya link,username, password 
+              Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root" , "January_97" ); 
+              //abovestatement ,ydb exist mysql 
+              Statement st=con.createStatement(); 
+              //display all 
+              String str="select * from booking" ; 
+              ResultSet rs=st.executeQuery(str); 
+                while(rs.next()){ 
+                
+                %>
                 <tr>
                   <td>
                     <%=rs.getInt("idbooking") %>
@@ -205,7 +213,10 @@
                   </td>
                 </tr>
 
-                <% }// while loop complete }catch(Exception e){ } %>
+                <% } // while loop complete 
+                }
+              catch(Exception e){ } 
+              %>
                   <!-- <tr>
         <td>789012</td>
         <td>Flight IAN1250</td>

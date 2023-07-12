@@ -5,8 +5,8 @@ public class Flight {
 	private String flight_origin;
 	private String flight_destination;
 	private String flight_departure;
-	private String flight_arrival;
-	private String flight_date;
+	private String flight_return;
+	private String flight_time;
 	private String flight_price;
 
 	public String getFlight_no() {
@@ -41,20 +41,20 @@ public class Flight {
 		this.flight_departure = flight_departure;
 	}
 
-	public String getFlight_arrival() {
-		return flight_arrival;
+	public String getFlight_return() {
+		return flight_return;
 	}
 
-	public void setFlight_arrival(String flight_arrival) {
-		this.flight_arrival = flight_arrival;
+	public void setFlight_return(String flight_return) {
+		this.flight_return = flight_return;
 	}
 
-	public String getFlight_date() {
-		return flight_date;
+	public String getFlight_time() {
+		return flight_time;
 	}
 
-	public void setFlight_date(String flight_date) {
-		this.flight_date = flight_date;
+	public void setFlight_time(String flight_date) {
+		this.flight_time = flight_date;
 	}
 
 	public String getFlight_price() {
