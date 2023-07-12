@@ -1,4 +1,7 @@
-
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import = "java.sql.DriverManager" %>
 <!DOCTYPE html>
 
 <html>
@@ -119,17 +122,35 @@
       
     </div>
   </nav>
+   
   <div class="container">
-    <h1 class="heading">Flight Selection</h1>
+   <h1 class="heading">Flight Selection</h1>
+  <% 
+						    try {
+						    	//Retrieve data from database
+						    	Class.forName("com.mysql.jdbc.Driver");
+								//Database punya link, username, password
+								Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "January_97");
+								//above statement ,ydb exist mysql
+								Statement st = con.createStatement();
+								//display all
+								String str = "select * from flight";
+								ResultSet rs = st.executeQuery(str);
+								while(rs.next()){
+						%>
+   
+   
     <ul class="flight-list">
+   
       <li class="flight-item">
-        <h2>Flight 1</h2>
-        <p>Origin: Penang</p>
-        <p>Destination: Langkawi</p>
-        <p>Departure Time: 10:00 AM</p>
-        <p>Arrival Time: 12:00 PM</p>
+        <h2>Flight <%=rs.getInt("idflight") %></h2>
+        <p>Origin: <%=rs.getString("flight_origin") %></p>
+        <p>Destination: <%=rs.getString("flight_destination") %></p>
+        <p>Departure Date: <%=rs.getString("flight_departure") %></p>
+        <p>Arrival Time: <%=rs.getString("flight_time") %></p>
       </li>
-      <li class="flight-item">
+      
+      <!--  <li class="flight-item">
         <h2>Flight 2</h2>
         <p>Origin: Perthlis</p>
         <p>Destination: London</p>
@@ -142,8 +163,14 @@
         <p>Destination: Aloq Staq</p>
         <p>Departure Time: 4:00 PM</p>
         <p>Arrival Time: 6:00 PM</p>
-      </li>
+      </li>-->
     </ul>
+    <% }// while loop complete
+								
+						    }catch(Exception e){
+						    	
+						    }  
+						%>  
     <a class="continue-btn" href="#">Continue</a>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
