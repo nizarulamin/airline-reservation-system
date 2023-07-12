@@ -12,15 +12,15 @@ import com.AirlineReservationSystem.beans.Flight;
 import com.AirlineReservationSystem.model.FlightDB;
 
 /**
- * Servlet implementation class AddFlighter
+ * Servlet implementation class EditFlight
  */
-public class AddFlighter extends HttpServlet {
+public class EditFlight extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public AddFlighter() {
+	public EditFlight() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -44,13 +44,14 @@ public class AddFlighter extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 		PrintWriter out = response.getWriter();
+
 		String flight_no = request.getParameter("flight_no");
 		String flight_origin = request.getParameter("From");
 		String flight_destination = request.getParameter("To");
 		String flight_departure = request.getParameter("depart");
 		String flight_return = request.getParameter("return");
 		String flight_time = request.getParameter("time");
-		Double flight_price = Double.parseDouble(request.getParameter("price"));
+		double flight_price = Double.parseDouble(request.getParameter("price"));
 
 		Flight rb = new Flight();
 
@@ -63,15 +64,15 @@ public class AddFlighter extends HttpServlet {
 		rb.setPrice(flight_price);
 
 		FlightDB ud = new FlightDB();
-		String s1 = ud.insertUser(rb);
+		String s1 = ud.updateFlight(rb);
 
 		System.out.println(s1);
-		out.println(flight_no);
-		out.println(flight_origin);
-		out.println(flight_destination);
-		out.println(flight_departure);
-		out.println(flight_return);
-		out.println(flight_time);
-		out.println(flight_price);
+
+		if (s1.equalsIgnoreCase("Data Update Successfully")) {
+			response.sendRedirect("http://localhost:8080/IANNZProjectAirlines/admin-flight-info.jsp");
+		} else {
+			out.println("Invalid Info!");
+		}
 	}
+
 }

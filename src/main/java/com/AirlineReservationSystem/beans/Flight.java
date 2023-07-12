@@ -1,13 +1,22 @@
 package com.AirlineReservationSystem.beans;
 
 public class Flight {
+	private int flightId;
 	private String flight_no;
 	private String flight_origin;
 	private String flight_destination;
 	private String flight_departure;
 	private String flight_return;
 	private String flight_time;
-	private String flight_price;
+	private double price;
+
+	public int getFlightId() {
+		return flightId;
+	}
+
+	public void setFlightId(int flightId) {
+		this.flightId = flightId;
+	}
 
 	public String getFlight_no() {
 		return flight_no;
@@ -53,16 +62,16 @@ public class Flight {
 		return flight_time;
 	}
 
-	public void setFlight_time(String flight_date) {
-		this.flight_time = flight_date;
+	public void setFlight_time(String flight_time) {
+		this.flight_time = flight_time;
 	}
 
-	public String getFlight_price() {
-		return flight_price;
+	public double getPrice() {
+		return price;
 	}
 
-	public void setFlight_price(String price) {
-		this.flight_price = price;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 
 }
