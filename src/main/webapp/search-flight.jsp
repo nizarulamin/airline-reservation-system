@@ -149,7 +149,7 @@
     <form action="flight-selection.jsp" method="get">
       <label for="from">From:</label>
       <select type="text" id="from" name="from" placeholder="Departure city" required>
-      <option value="">Origin</option>
+      <option value="" onkeyup="myFunction()">Origin</option>
 						<option value="AOR">Alor Star AOR</option>
 						<option value="IPH">Ipoh IPH</option>
 						<option value="JHB">Johor Bahru JHB</option>
@@ -207,6 +207,23 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
-
+	<script>
+	function myFunction() {
+	    var input, filter, ul, li, a, i, txtValue;
+	    input = document.getElementById("myInput");
+	    filter = input.value.toUpperCase();
+	    ul = document.getElementById("myUL");
+	    li = ul.getElementsByTagName("li");
+	    for (i = 0; i < li.length; i++) {
+	        a = li[i].getElementsByTagName("a")[0];
+	        txtValue = a.textContent || a.innerText;
+	        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+	            li[i].style.display = "";
+	        } else {
+	            li[i].style.display = "none";
+	        }
+	    }
+	}
+	</script>
 </body>
 </html>
