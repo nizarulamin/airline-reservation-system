@@ -199,7 +199,7 @@
         <input type="submit" id="login" value="Login">
       </p>
 
-      <a href="#" style="font-size:13px;" id="forgot-password.jsp">Forgot Password</a>
+      <a href="forget-password.jsp" style="font-size:13px;" id="forgot-password.jsp">Forgot Password</a>
 
       <!--<a href="#" style="font-size:13px; text-align:right;">Forgot Password</a><br>-->
       <p></p>
