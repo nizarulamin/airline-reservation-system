@@ -100,7 +100,7 @@
     }
   </style>
   <body>
-    <jsp:include page="navbar-before.jsp" />
+    <jsp:include page="navbar-after.jsp" />
     <!-- Banner Image -->
     <div class="container">
       <img

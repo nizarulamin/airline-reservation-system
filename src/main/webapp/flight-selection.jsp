@@ -1,9 +1,26 @@
+
+<!DOCTYPE html>
+
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page import = "java.sql.DriverManager" %>
-<!DOCTYPE html>
-
+<%
+String driver = "com.mysql.jdbc.Driver";
+String connectionUrl = "jdbc:mysql://localhost:3306/";
+String database = "student";
+String userid = "root";
+String password = "";
+String roll_no=request.getParameter("flight_no");
+try {
+Class.forName(driver);
+} catch (ClassNotFoundException e) {
+e.printStackTrace();
+}
+Connection connection = null;
+Statement statement = null;
+ResultSet resultSet = null;
+%>
 <html>
 <head>
   <title>Flight Selection</title>
@@ -11,7 +28,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #cfebff;
+      background-color: aqua;
     }
 
     h1 {
@@ -30,14 +47,14 @@
     }
 
     .flight-item {
-      border: 1px solid green;
+      border: 1px solid #ccc;
       margin-bottom: 10px;
       padding: 10px;
       cursor: pointer;
     }
 
     .flight-item:hover {
-      background-color: #90EE90;
+      background-color: #f9f9f9;
     }
 
     .flight-item h2 {
@@ -122,10 +139,9 @@
       
     </div>
   </nav>
-   
   <div class="container">
-   <h1 class="heading">Flight Selection</h1>
-  <% 
+    <h1 class="heading">Flight Selection</h1>
+     <% 
 						    try {
 						    	//Retrieve data from database
 						    	Class.forName("com.mysql.jdbc.Driver");
@@ -134,31 +150,37 @@
 								//above statement ,ydb exist mysql
 								Statement st = con.createStatement();
 								//display all
-								String str = "select * from flight";
+								String str = "select * from  flight";
 								ResultSet rs = st.executeQuery(str);
 								while(rs.next()){
 						%>
-			    <ul class="flight-list">
-			   
+			    <ul class="flight-list" id="myUL"> 
 			      <li class="flight-item">
-			        <h2>Flight <%=rs.getInt("idflight") %></h2>
+			        <h2>Flight <%=rs.getInt("flight_id") %></h2>
 			        <p>Origin: <%=rs.getString("flight_origin") %></p>
 			        <p>Destination: <%=rs.getString("flight_destination") %></p>
-			        <p>Departure Date: <%=rs.getString("flight_departure") %></p>
-			        <p>Arrival Time: <%=rs.getString("flight_time") %></p>
+			        <p>Departure Date: <%=rs.getString("departure_time") %></p>
+			        <p>Arrival Time: <%=rs.getString("flight_fares") %></p>
 			      </li>
 			       <% } // while loop complete 
 			                }
 			              catch(Exception e){ } 
 			              %>
       <!-- <li class="flight-item">
-        <h2>Flight 2</h2>
-        <p><i class="fas fa-plane-departure"></i>Origin: Perthlis</p>
-        <p><i class="fas fa-plane-arrival"></i>Destination: London</p>
-        <p><i class="fas fa-clock"></i>Departure Time: 1:00 PM</p>
-        <p><i class="fas fa-clock"></i>Arrival Time: 3:00 PM</p>
+        <h2>Flight 1</h2>
+        <p>Origin: Penang</p>
+        <p>Destination: Langkawi</p>
+        <p>Departure Time: 10:00 AM</p>
+        <p>Arrival Time: 12:00 PM</p>
       </li>
-      <li class="flight-item" onclick="selectFlight(3)">
+      <li class="flight-item">
+        <h2>Flight 2</h2>
+        <p>Origin: Perthlis</p>
+        <p>Destination: London</p>
+        <p>Departure Time: 1:00 PM</p>
+        <p>Arrival Time: 3:00 PM</p>
+      </li>
+      <li class="flight-item">
         <h2>Flight 3</h2>
         <p>Origin: Newcastle</p>
         <p>Destination: Aloq Staq</p>
@@ -172,18 +194,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-    
-    <script>
-    // JavaScript function to handle flight selection
-    function selectFlight(flightId) {
-      // Store selected flight ID in local storage
-      localStorage.setItem('selectedFlight', flightId);
-
-      // Redirect to seat selection page
-      window.location.href = 'add-flight.jsp';
-    }
-  </script>
 
 </body>
 </html>

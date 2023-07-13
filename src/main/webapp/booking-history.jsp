@@ -1,140 +1,141 @@
-<%@page import="java.sql.ResultSet" %>
-  <%@page import="java.sql.Statement" %>
-    <%@page import="java.sql.Connection" %>
-      <%@page import="java.sql.DriverManager" %>
-        <!DOCTYPE html>
-        <html>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import = "java.sql.DriverManager" %>
+<!DOCTYPE html>
+<html>
 
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Booking History</title>
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking History</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
-          <style>
-            body {
-              font-family: Arial, sans-serif;
-              margin: 0;
-              padding: 0;
-              background-color: #cfebff;
-            }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-            .container {
-              max-width: 1500px;
-              margin: 0 auto;
-              padding: 40px;
+    .container {
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 40px;
+      
+    }
 
-            }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
 
-            h1 {
-              text-align: center;
-              margin-bottom: 20px;
-              margin-top: 0;
-            }
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-            table {
-              width: 100%;
-              border-collapse: separate;
-              border-spacing: 0;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
+    th,
+    td {
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
 
-            th,
-            td {
-              padding: 15px;
-              text-align: center;
-              border: 1px solid #ddd;
-            }
+    th {
+      background-color: #ffffff;
+      border-color: #888 #ddd #888;
+    }
 
-            th {
-              background-color: #ffffff;
-              border-color: #888 #ddd #888;
-            }
+   
 
+    /* Add some styles for table responsiveness */
+    @media screen and (max-width: 600px) {
+      table {
+        font-size: 14px;
+      }
 
+      th,
+      td {
+        padding: 8px;
+      }
+    }
 
-            /* Add some styles for table responsiveness */
-            @media screen and (max-width: 600px) {
-              table {
-                font-size: 14px;
-              }
+    /* Add some styles for status buttons */
+    .status-btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 18px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+    }
 
-              th,
-              td {
-                padding: 8px;
-              }
-            }
+    /* Define different styles for different status */
+    .status-upcoming {
+      background-color: #04AA6D;
+    }
 
-            /* Add some styles for status buttons */
-            .status-btn {
-              display: inline-block;
-              padding: 10px 18px;
-              border-radius: 18px;
-              color: #fff;
-              font-size: 14px;
-              font-weight: bold;
-              text-align: center;
-            }
+    .status-past {
+      background-color: #c53b4f;
+    }
 
-            /* Define different styles for different status */
-            .status-upcoming {
-              background-color: #04AA6D;
-            }
+    .status-expired {
+      background-color: #4d4d4d;
+    }
 
-            .status-past {
-              background-color: #c53b4f;
-            }
+    .btn {
+      height: 35px;
+      width: 120px;
+      border: none;
+      background-color: #119cff;
+      font-size: 12px;
+      color: #fff;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center
+    }
 
-            .status-expired {
-              background-color: #4d4d4d;
-            }
+    .btn:hover {
+      background-color: #000
+    }
 
-            .btn {
-              height: 35px;
-              width: 120px;
-              border: none;
-              background-color: #119cff;
-              font-size: 12px;
-              color: #fff;
-              border-radius: 5px;
-              display: flex;
-              justify-content: center;
-              align-items: center
-            }
+    .btn:focus {
+      box-shadow: none;
+      outline: none
+    }
 
-            .btn:hover {
-              background-color: #000
-            }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 22px
+    }
 
-            .btn:focus {
-              box-shadow: none;
-              outline: none
-            }
+    .airline {
+      color: #119cff
+    }
 
-            .navbar-brand {
-              font-weight: 700;
-              font-size: 22px
-            }
+    .highlight {
+      color: #119cff
+    }
 
-            .airline {
-              color: #119cff
-            }
+    .nav-item {
+      font-weight: 500;
+      color: #000000
+    }
 
-            .highlight {
-              color: #119cff
-            }
+    .heading {
+      font-weight: 700;
+      font-size: 35px
+    }
 
-            .nav-item {
-              font-weight: 500;
-              color: #000000
-            }
-
-            .heading {
-              font-weight: 700;
-              font-size: 35px
-            }
-          </style>
-        </head>
+  
+  </style>
+</head>
 
 <body>
   <!-- Top navigation -->
@@ -146,10 +147,10 @@
           class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"> <a class="nav-link" href="index.jsp">Home</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="search-flight.jsp">Flight</a> </li>
+          <li class="nav-item"><a class="nav-link" href="index.jsp"><i class="fa fa-home"></i>&nbsp;Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="search-flight.jsp"><i class="fa fa-plane"></i>&nbsp;Flight</a> </li>
           <li class="nav-item"> <a class="nav-link active" aria-current="page" href="booking-history.jsp"><span
-                class="highlight">Booking</span></a> </li>
+                class="highlight"><i class="fa fa-book"></i>&nbsp;Booking</span></a> </li>
         </ul>
       </div>
       <div class="nav-item"> <a class="nav-link" href="login.jsp" style="color: #7f858a;">Login</a> </div>
@@ -160,64 +161,49 @@
   <div class="mt-3 d-flex justify-content-center"> <span class="heading">My Booking</span> </div>
 
 
-          <div class="container" style="background-image: url();">
+  <div class="container" style="background-image: url();">
 
-            <table>
-              <tr>
-                <th>Booking ID</th>
-                <th>Flight No</th>
-                <th>Date</th>
-                <th>From</th>
-                <th>To</th>
-                <th>Passenger</th>
-                <th>Seat</th>
-                <th>Status</th>
-              </tr>
-              <% 
-              try { //Retrieve data from database 
-              Class.forName("com.mysql.jdbc.Driver"); 
-              //Database punya link,username, password 
-              Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root" , "January_97" ); 
-              //abovestatement ,ydb exist mysql 
-              Statement st=con.createStatement(); 
-              //display all 
-              String str="select * from booking" ; 
-              ResultSet rs=st.executeQuery(str); 
-                while(rs.next()){ 
-                
-                %>
-                <tr>
-                  <td>
-                    <%=rs.getInt("idbooking") %>
-                  </td>
-                  <td>
-                    <%=rs.getString("flight_no") %>
-                  </td>
-                  <td>
-                    <%=rs.getString("flight_date") %>
-                  </td>
-                  <td>
-                    <%=rs.getString("flight_origin") %>
-                  </td>
-                  <td>
-                    <%=rs.getString("flight_arrival") %>
-                  </td>
-                  <td>
-                    <%=rs.getString("flight_arrival") %>
-                  </td>
-                  <td>
-                    <%=rs.getString("flight_arrival") %>
-                  </td>
-                  <td>
-                    <%=rs.getString("flight_arrival") %>
-                  </td>
-                </tr>
-
-                <% } // while loop complete 
-                }
-              catch(Exception e){ } 
-              %>
-                  <!-- <tr>
+    <table>
+      <tr>
+        <th>Flight No</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Departure</th>
+        <th>Arrival</th>
+        <th>Price</th>
+        <th>Status</th>
+      </tr>
+       <% 
+						    try {
+						    	//Retrieve data from database
+						    	Class.forName("com.mysql.jdbc.Driver");
+								//Database punya link, username, password
+								Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/project", "root", "January_97");
+								//above statement ,ydb exist mysql
+								Statement st = con.createStatement();
+								//display all
+								String str = "Select f.*, b.*,u.*,s.* from flight_booking b INNER JOIN user u on b.booking_id=u.user_id INNER JOIN flight f on b.booking_id=f.flight_id INNER JOIN seat s on b.booking_id=s.seat_id;";
+								ResultSet rs = st.executeQuery(str);
+								while(rs.next()){
+						%>
+                          <tr>
+                            <td><%=rs.getString("flight_no") %></td>
+                            <td><%=rs.getString("flight_origin") %></td>
+                            <td><%=rs.getString("departure_date") %></td>
+                            <td><%=rs.getString("return_date") %></td>
+                            <td><%=rs.getString("departure_time") %></td>
+                           <!--  <td><%=rs.getString("arrival_time") %></td> -->
+                            <td><%=rs.getString("flight_fares") %></td>
+                            <td><%=rs.getString("booking_status") %></td>
+                          </tr>
+                         
+						<% }// while loop complete
+								
+						    }catch(Exception e){
+						    	
+						    }  
+						%>        
+     <!-- <tr>
         <td>789012</td>
         <td>Flight IAN1250</td>
         <td>2023-07-03</td>
@@ -246,6 +232,6 @@
           <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 
 
-        </body>
+</body>
 
-        </html>
+</html>

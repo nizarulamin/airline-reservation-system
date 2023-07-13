@@ -94,8 +94,8 @@
       <li><a href="index.jsp"><i class="fa fa-home"></i>&nbsp; Home</a></li>
       <li><a href="passenger-details.jsp"><i class="fa fa-book"></i>&nbsp; Passenger Info</a></li>
       <li><a href="flight-info"><i class="fa fa-book"></i>&nbsp; Flight Info</a></li>
-      <li><a href="add-flight.jsp"><i class="fa fa-book"></i>&nbsp; Add New Flight</a></li>
-      <li><a href="edit-flight.jsp"><i class="fa fa-users"></i>&nbsp; Modify Flight</a></li>
+      <li><a href="add-flight.jsp"><i class="fa fa-plane"></i>&nbsp; Add New Flight</a></li>
+      <li><a href="edit-flight.jsp"><i class="fa fa-plane"></i>&nbsp; Modify Flight</a></li>
     </ul>
   </nav>
   <!-- w3-content defines a container for fixed size centered content, 
@@ -113,7 +113,11 @@ and is wrapped around the whole page content, except for the footer in this exam
     <!-- END w3-content -->
   </div>
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 
 </body>
 

@@ -16,7 +16,7 @@ public class FlightDB {
 		try {
 			Statement stat = con.createStatement();
 			stat.executeUpdate(
-					"insert into flight(flight_no,flight_origin,flight_destination,flight_departure,flight_return,flight_time,flight_price) values('"
+					"insert into flight(flight_no,flight_origin,flight_destination,departure_date,departure_return,arrival_time,flight_fares) values('"
 							+ rb.getFlight_no() + "','" + rb.getFlight_origin() + "','" + rb.getFlight_destination()
 							+ "','" + rb.getFlight_departure() + "','" + rb.getFlight_return() + "','"
 							+ rb.getFlight_time() + "','" + rb.getPrice() + "')");
