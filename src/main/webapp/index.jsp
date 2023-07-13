@@ -108,7 +108,7 @@
 >>>>>>> 2364877d58cb5a042a96d8505fddf6cc91f9f7a8
 
   <body>
-    <jsp:include page="navbar-before.jsp" />
+    <jsp:include page="navbar-after.jsp" />
     <!-- Banner Image -->
     <div class="container">
       <img
@@ -128,18 +128,39 @@
             <div class="col">
               <label for="from">From:</label>
               <select class="form-control" id="from" name="from">
-                <option value="city1">City 1</option>
-                <option value="city2">City 2</option>
-                <option value="city3">City 3</option>
+                <option value="">Origin</option>
+						<option value="AOR">Alor Star AOR</option>
+						<option value="IPH">Ipoh IPH</option>
+						<option value="JHB">Johor Bahru JHB</option>
+						<option value="BKI">Kota Kinabalu BKI</option>
+						<option value="KBR">Kota Bharu KBR</option>
+						<option value="KUL">Kuala Lumpur KUL</option>
+						<option value="KCH">Kuching KCH</option>
+						<option value="LGK">Langkawi LGK</option>
+						<option value="PEN">Penang PEN</option>
+						<option value="PLS">Perlis PLS</option>
+						<option value="SZB">Subang SZB</option>
+						<option value="TGG">Terengganu TGG</option>
                 <!-- Add more cities here -->
               </select>
             </div>
             <div class="col">
               <label for="to">To:</label>
               <select class="form-control" id="to" name="to">
-                <option value="city1">City 1</option>
-                <option value="city2">City 2</option>
-                <option value="city3">City 3</option>
+                <option value="">Destination</option>
+						<option value="AOR">Alor Star AOR</option>
+						<option value="IPH">Ipoh IPH</option>
+						<option value="JHB">Johor Bahru JHB</option>
+						<option value="BKI">Kota Kinabalu BKI</option>
+						<option value="KBR">Kota Bharu KBR</option>
+						<option value="KUL">Kuala Lumpur KUL</option>
+						<option value="KCH">Kuching KCH</option>
+						<option value="LGK">Langkawi LGK</option>
+						<option value="PEN">Penang PEN</option>
+						<option value="PLS">Perlis PLS</option>
+						<option value="SZB">Subang SZB</option>
+						<option value="TGG">Terengganu TGG</option>
+                
                 <!-- Add more cities here -->
               </select>
             </div>

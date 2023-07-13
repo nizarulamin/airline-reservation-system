@@ -52,8 +52,12 @@
   	<description></description>
   	<servlet-class>com.AirlineReservationSystem.controller.ResetPassword</servlet-class>
   </servlet>
+<<<<<<< HEAD
  
  <servlet>
+=======
+  <servlet>
+>>>>>>> 4704560089f13462c712c459360b972f95c92771
   	<servlet-name>Register</servlet-name>
   	<display-name>Register</display-name>
   	<description></description>

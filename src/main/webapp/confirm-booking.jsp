@@ -76,7 +76,7 @@
     </div>
     
     <div class="confirm-button">
-      <button onclick="confirmBooking()">Confirm Booking</button>
+      <a href="booking-history.jsp"><button onclick="confirmBooking()">Confirm Booking</button></a>
     </div>
   </div>
   
