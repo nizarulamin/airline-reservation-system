@@ -147,10 +147,10 @@
           class="navbar-toggler-icon"></span> </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"> <a class="nav-link" href="index.jsp">Home</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="search-flight.jsp">Flight</a> </li>
+          <li class="nav-item"><a class="nav-link" href="index.jsp"><i class="fa fa-home"></i>&nbsp;Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="search-flight.jsp"><i class="fa fa-plane"></i>&nbsp;Flight</a> </li>
           <li class="nav-item"> <a class="nav-link active" aria-current="page" href="booking-history.jsp"><span
-                class="highlight">Booking</span></a> </li>
+                class="highlight"><i class="fa fa-book"></i>&nbsp;Booking</span></a> </li>
         </ul>
       </div>
       <div class="nav-item"> <a class="nav-link" href="login.jsp" style="color: #7f858a;">Login</a> </div>
@@ -222,14 +222,14 @@
         <td>Lee Know</td>
         <td>35D</td>
         <td><span class="status-btn status-expired">Expired</span></td>
-      </tr> --> 
-      <!-- Add more rows for additional bookings -->
-    </table>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+      </tr> -->
+                  <!-- Add more rows for additional bookings -->
+            </table>
+          </div>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
 
 
 </body>

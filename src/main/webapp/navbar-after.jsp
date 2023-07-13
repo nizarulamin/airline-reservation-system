@@ -127,6 +127,8 @@
         <li class="nav-item">
           <a class="nav-link" href="search-flight.jsp">Flight</a>
         </li>
+        <li class="nav-item"><a class="nav-link "
+					href="booking-history.jsp">MyBooking</a></li>
       </ul>
     </div>
     <div class="ml-auto">
@@ -141,7 +143,7 @@
             aria-expanded="false"
           >
             <i class="fa fa-user"></i>
-            <span id="userFirstName">John</span>
+            <span id="userFirstName">Welcome,John</span>
           </a>
           <div class="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">My Booking</a>
@@ -151,5 +153,8 @@
         </li>
       </ul>
     </div>
+    <div class="nav-item">
+			<a class="nav-link" href="login.jsp" style="color: #7f858a;">Logout</a>
+		</div>
   </div>
 </nav>

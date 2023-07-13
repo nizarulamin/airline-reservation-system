@@ -6,7 +6,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: #cfebff;
       padding: 20px;
     }
     .container {
@@ -76,7 +76,7 @@
     </div>
     
     <div class="confirm-button">
-      <button onclick="confirmBooking()">Confirm Booking</button>
+      <a href="booking-history.jsp"><button onclick="confirmBooking()">Confirm Booking</button></a>
     </div>
   </div>
   

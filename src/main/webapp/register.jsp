@@ -111,7 +111,7 @@ function wrong_pass_alert() {
 }
 </script>  
 <body>
-    <jsp:include page="navbar.jsp" />
+    <jsp:include page="navbar-before.jsp" />
 <div class="container">
   <h1>Register</h1>
   <p>Please fill in this form to create an account.</p>

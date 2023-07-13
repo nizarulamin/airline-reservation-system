@@ -14,6 +14,7 @@
     body {
       font-family: "Poppins";
       font-size: 22px;
+      background-color: #cfebff;
     }
     *,
     *:before,
