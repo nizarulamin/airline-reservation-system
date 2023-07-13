@@ -384,7 +384,8 @@
                             <th>To</th>
                             <th>Departure</th>
                             <th>Return</th>
-                            <th>Time</th>
+                            <th>Departure Time</th>
+                            <th>Arrival Time</th>
                             <th>Price</th>
                             <th>Edit Flight</th>
                           </tr>
@@ -408,10 +409,10 @@
                             <td><%=rs.getString("flight_destination") %></td>
                             <td><%=rs.getString("departure_date") %></td>
                             <td><%=rs.getString("return_date") %></td>
-                            <td><%=rs.getString("deprture_time") %></td>  
+                            <td><%=rs.getString("departure_time") %></td>
                             <td><%=rs.getString("arrival_time") %></td>  
-                            <td><%=rs.getString("flight_fares") %></td>                       
-                            <td><a href="admin-edit-flight.jsp?id=<%=rs.getInt("flightId") %>"><button class="badge bg-red" >EDIT</button></a></td>
+                            <td><%=rs.getString("flight_fares") %></td>                    
+                            <td><a href="admin-edit-flight.jsp?id=<%=rs.getInt("flight_id") %>"><button class="badge bg-red" >EDIT</button></a></td>
                           </tr>
                          
 <% }// while loop complete
