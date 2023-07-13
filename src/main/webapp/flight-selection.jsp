@@ -1,17 +1,16 @@
-
-<!DOCTYPE html>
-
+<%@page import="java.sql.DriverManager"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
-<%@page import = "java.sql.DriverManager" %>
 <%
 String driver = "com.mysql.jdbc.Driver";
 String connectionUrl = "jdbc:mysql://localhost:3306/";
-String database = "student";
+String database = "project";
 String userid = "root";
-String password = "";
-String roll_no=request.getParameter("flight_no");
+String password = "January_97";
+String origin = request.getParameter("origin");
+String destination = request.getParameter("destination");
+String departure_date = request.getParameter("departure_date");
 try {
 Class.forName(driver);
 } catch (ClassNotFoundException e) {
@@ -21,6 +20,7 @@ Connection connection = null;
 Statement statement = null;
 ResultSet resultSet = null;
 %>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Flight Selection</title>
@@ -150,7 +150,9 @@ ResultSet resultSet = null;
 								//above statement ,ydb exist mysql
 								Statement st = con.createStatement();
 								//display all
-								String str = "select * from  flight";
+								String str = "select * from  flight where flight_origin LIKE '%"+origin+"%' "
+								+ "AND flight_destination LIKE '%"+destination+"%'"
+								+ "AND departure_date LIKE '%"+departure_date+"%'";
 								ResultSet rs = st.executeQuery(str);
 								while(rs.next()){
 						%>
@@ -159,8 +161,9 @@ ResultSet resultSet = null;
 			        <h2>Flight <%=rs.getInt("flight_id") %></h2>
 			        <p>Origin: <%=rs.getString("flight_origin") %></p>
 			        <p>Destination: <%=rs.getString("flight_destination") %></p>
-			        <p>Departure Date: <%=rs.getString("departure_time") %></p>
-			        <p>Arrival Time: <%=rs.getString("flight_fares") %></p>
+			        <p>Departure Date: <%=rs.getString("departure_date") %></p>
+			        <p>Price: RM<%=rs.getString("flight_fares") %></p>
+			        <p>Available Seat:<%=rs.getString("seat_available") %></p>
 			      </li>
 			       <% } // while loop complete 
 			                }
@@ -188,7 +191,7 @@ ResultSet resultSet = null;
         <p>Arrival Time: 6:00 PM</p>
       </li>
     </ul> -->
-    <a class="continue-btn" href="#">Continue</a>
+    <a class="continue-btn" href="#">Next</a>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
