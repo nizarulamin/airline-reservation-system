@@ -52,20 +52,24 @@
   	<description></description>
   	<servlet-class>com.AirlineReservationSystem.controller.ResetPassword</servlet-class>
   </servlet>
-  <servlet-mapping>
+ 
+ <servlet>
   	<servlet-name>Register</servlet-name>
   	<display-name>Register</display-name>
   	<description></description>
   	<servlet-class>com.AirlineReservationSystem.controller.Register</servlet-class>
-  </servlet>
+  	</servlet>
+ 
   <servlet-mapping>
   	<servlet-name>Login</servlet-name>
   	<url-pattern>/Login</url-pattern>
   </servlet-mapping>
+  
   <servlet-mapping>
   	<servlet-name>Registration</servlet-name>
   	<url-pattern>/Registration</url-pattern>
   </servlet-mapping>
+  
   <servlet-mapping>
   	<servlet-name>LoginAdmin</servlet-name>
   	<url-pattern>/LoginAdmin</url-pattern>
